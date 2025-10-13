@@ -1,8 +1,8 @@
 /* Bootstrap Overrides for Red/Black Theme */
 .btn-primary {
   color: #fff !important;
-  background-color: #dc2626 !important;
-  border-color: #dc2626 !important;
+  background-color: #00008B !important;
+  border-color: #00008B !important;
 }
 
 .btn-primary:hover {
@@ -17,8 +17,8 @@
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff !important;
-  background-color: #dc2626 !important;
-  border-color: #dc2626 !important;
+  background-color: #00008B !important;
+  border-color: #00008B !important;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, 
@@ -30,15 +30,15 @@
 }
 
 .btn-outline-primary {
-  color: #dc2626 !important;
+  color: #00008B !important;
   background-color: transparent !important;
-  border-color: #dc2626 !important;
+  border-color: #00008B !important;
 }
 
 .btn-outline-primary:hover {
   color: #fff !important;
-  background-color: #dc2626 !important;
-  border-color: #dc2626 !important;
+  background-color: #00008B !important;
+  border-color: #00008B !important;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
@@ -46,7 +46,7 @@
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #dc2626 !important;
+  color: #00008B !important;
   background-color: transparent !important;
 }
 
@@ -54,28 +54,28 @@
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
   color: #fff !important;
-  background-color: #dc2626 !important;
-  border-color: #dc2626 !important;
+  background-color: #00008B !important;
+  border-color: #00008B !important;
 }
 
 /* Override any remaining Bootstrap primary colors */
 .text-primary {
-  color: #dc2626 !important;
+  color: #00008B !important;
 }
 
 .bg-primary {
-  background-color: #dc2626 !important;
+  background-color: #00008B !important;
 }
 
 .border-primary {
-  border-color: #dc2626 !important;
+  border-color: #00008B !important;
 }
 
 /* Ensure all primary buttons use red */
 .btn.btn-primary,
 .btn-primary {
-  background: #dc2626 !important;
-  border-color: #dc2626 !important;
+  background: #00008B !important;
+  border-color: #00008B !important;
   color: #fff !important;
 }
 
@@ -98,9 +98,9 @@
 .border-success,
 .table-success,
 .badge-success {
-  color: #dc2626 !important;
-  background-color: #dc2626 !important;
-  border-color: #dc2626 !important;
+  color: #00008B !important;
+  background-color: #00008B !important;
+  border-color: #00008B !important;
 }
 
 /* More specific overrides for pricing page checkmarks */
@@ -109,7 +109,7 @@
 .text-success.ion-ios-checkmark,
 i.text-success,
 .ion-ios-checkmark.text-success {
-  color: #dc2626 !important;
+  color: #00008B !important;
 }
 
 /* Override any Bootstrap success button states */
@@ -127,7 +127,7 @@ i.text-success,
 .pricing-item .amount,
 .price-display .amount,
 .price-tag .amount {
-  color: #dc2626 !important;
+  color: #00008B !important;
 }
 
 /* Only make main package prices white (the large cards) */
@@ -157,7 +157,7 @@ i.text-success,
 }
 
 .ftco-footer a:hover {
-  color: #dc2626 !important;
+  color: #00008B !important;
 }
 
 .ftco-footer ul li {
@@ -196,7 +196,7 @@ i.text-success,
 }
 
 .card-body ul li i {
-  color: #dc2626 !important;
+  color: #00008B !important;
 }
 
 .pricing-item {
