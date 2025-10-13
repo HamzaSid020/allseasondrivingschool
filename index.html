@@ -100,110 +100,181 @@
   </nav>
   <!-- END nav -->
 
-  <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');"
-    data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
-        <div class="col-lg-8 ftco-animate">
-          <div class="text w-100 text-center mb-0 pb-0" style="margin-top: -300px;">
-            <h1 class="mb-4">Learn to Drive with Confidence</h1>
-            <p style="font-size: 18px;">Professional driving instruction from certified instructors. Get your driver's
-              license with our comprehensive training programs designed for all skill levels.</p>
-            <!-- <a href="https://vimeo.com/45830194" class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
-	            	<div class="icon d-flex align-items-center justify-content-center">
-	            		<span class="ion-ios-play"></span>
-	            	</div>
-	            	<div class="heading-title ml-5">
-		            	<span>Watch our driving lessons</span>
-	            	</div>
-	            </a> -->
+  <div class="hero-wrap ftco-degree-bg" style="
+  background-image: url('images/bg_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+" data-stellar-background-ratio="0.5">
+
+  <div class="overlay" style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+  "></div>
+
+  <div class="container" style="
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ">
+    <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center" style="
+      width: 100%;
+      text-align: center;
+    ">
+      <div class="col-lg-8" style="margin-top: -300px;">
+        <div class="text w-100 mb-0 pb-0" style="text-align: center;">
+          <h1 class="mb-4" style="
+            margin-bottom: 1.5rem;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            animation: fadeIn 2s ease forwards;
+            opacity: 0;
+          ">
+            Learn to Drive with Confidence
+          </h1>
+          <p style="
+            font-size: 18px;
+            color: #f8f9fa;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 3s ease forwards;
+            animation-delay: 1s;
+            opacity: 0;
+          ">
+            Professional driving instruction from certified instructors. Get your driver's license with our comprehensive training programs designed for all skill levels.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <section class="ftco-section ftco-no-pt bg-light">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-md-12 featured-top">
+        <div class="row no-gutters">
+          <!-- Left: Form Slide from Left -->
+          <div class="col-md-4 d-flex align-items-center">
+            <form action="#" class="request-form bg-primary" style="
+              animation: slideInLeft 1s ease forwards;
+              opacity: 0;
+            ">
+              <h2>Book Your Lesson</h2>
+              <div class="form-group">
+                <label for="" class="label">Your Name</label>
+                <input type="text" class="form-control" placeholder="Full Name">
+              </div>
+              <div class="form-group">
+                <label for="" class="label">Phone Number</label>
+                <input type="text" class="form-control" placeholder="Your Phone Number">
+              </div>
+              <div class="d-flex">
+                <div class="form-group mr-2">
+                  <label for="" class="label">Preferred Date</label>
+                  <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
+                </div>
+                <div class="form-group ml-2">
+                  <label for="" class="label">Course Type</label>
+                  <select class="form-control" id="course_type">
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                    <option>Test Preparation</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="label">Preferred Time</label>
+                <input type="text" class="form-control" id="time_pick" placeholder="Time">
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Book Lesson Now" class="btn btn-secondary py-3 px-4">
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Content Slide from Right -->
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="services-wrap rounded-right w-100" style="
+              animation: slideInRight 1s ease forwards;
+              animation-delay: 0.3s; /* thoda delay for stagger effect */
+              opacity: 0;
+            ">
+              <h3 class="heading-section mb-4">Professional Driving Instruction</h3>
+              <div class="row d-flex mb-4">
+                <div class="col-md-4 d-flex align-self-stretch">
+                  <div class="services w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+                    <div class="text w-100">
+                      <h3 class="heading mb-2">Certified Instructors</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch">
+                  <div class="services w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span></div>
+                    <div class="text w-100">
+                      <h3 class="heading mb-2">Flexible Scheduling</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch">
+                  <div class="services w-100 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span></div>
+                    <div class="text w-100">
+                      <h3 class="heading mb-2">Pass Your Test</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p><a href="contact.html" class="btn btn-primary py-3 px-4">Start Learning Today</a></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <section class="ftco-section ftco-no-pt bg-light">
-    <div class="container">
-      <div class="row no-gutters">
-        <div class="col-md-12	featured-top">
-          <div class="row no-gutters">
-            <div class="col-md-4 d-flex align-items-center">
-              <form action="#" class="request-form ftco-animate bg-primary">
-                <h2>Book Your Lesson</h2>
-                <div class="form-group">
-                  <label for="" class="label">Your Name</label>
-                  <input type="text" class="form-control" placeholder="Full Name">
-                </div>
-                <div class="form-group">
-                  <label for="" class="label">Phone Number</label>
-                  <input type="text" class="form-control" placeholder="Your Phone Number">
-                </div>
-                <div class="d-flex">
-                  <div class="form-group mr-2">
-                    <label for="" class="label">Preferred Date</label>
-                    <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
-                  </div>
-                  <div class="form-group ml-2">
-                    <label for="" class="label">Course Type</label>
-                    <select class="form-control" id="course_type">
-                      <option>Beginner</option>
-                      <option>Intermediate</option>
-                      <option>Advanced</option>
-                      <option>Test Preparation</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="" class="label">Preferred Time</label>
-                  <input type="text" class="form-control" id="time_pick" placeholder="Time">
-                </div>
-                <div class="form-group">
-                  <input type="submit" value="Book Lesson Now" class="btn btn-secondary py-3 px-4">
-                </div>
-              </form>
-            </div>
-            <div class="col-md-8 d-flex align-items-center">
-              <div class="services-wrap rounded-right w-100">
-                <h3 class="heading-section mb-4">Professional Driving Instruction</h3>
-                <div class="row d-flex mb-4">
-                  <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                    <div class="services w-100 text-center">
-                      <div class="icon d-flex align-items-center justify-content-center"><span
-                          class="flaticon-route"></span></div>
-                      <div class="text w-100">
-                        <h3 class="heading mb-2">Certified Instructors</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                    <div class="services w-100 text-center">
-                      <div class="icon d-flex align-items-center justify-content-center"><span
-                          class="flaticon-handshake"></span></div>
-                      <div class="text w-100">
-                        <h3 class="heading mb-2">Flexible Scheduling</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                    <div class="services w-100 text-center">
-                      <div class="icon d-flex align-items-center justify-content-center"><span
-                          class="flaticon-rent"></span></div>
-                      <div class="text w-100">
-                        <h3 class="heading mb-2">Pass Your Test</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p><a href="contact.html" class="btn btn-primary py-3 px-4">Start Learning Today</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-
+  <style>
+    /* Form: Left slide-in */
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-80px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    /* Content: Right slide-in */
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</section>
 
   <section class="ftco-section ftco-no-pt bg-light">
     <div class="container">
