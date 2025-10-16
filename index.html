@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>1st Step Car Driving School</title>
+  <title>All Season Driving School</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -78,8 +78,8 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html"> <img src="images/logo.png" alt="1st Step Car Driving School Logo"
-          style="height: 50px; margin-right: 10px;"> 1st Step<span> Car Driving School</span></a>
+      <a class="navbar-brand" href="index.html"> <img src="images/logo.png" alt="All Season Driving School Logo"
+          style="height: 50px; margin-right: 10px;">  </span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
         aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
@@ -276,172 +276,324 @@
   </style>
 </section>
 
-  <section class="ftco-section ftco-no-pt bg-light">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-          <span class="subheading">Our Packages</span>
-          <h2 class="mb-2">Featured Driving Packages</h2>
+<section class="ftco-section ftco-no-pt bg-light scroll-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 heading-section text-center ftco-animate mb-5 fade-in">
+        <span class="subheading">Our Packages</span>
+        <h2 class="mb-2">Featured Driving Packages</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="carousel-car owl-carousel">
+
+          <!-- Package 1 -->
+          <div class="item fade-right">
+            <div class="car-wrap rounded ftco-animate">
+              <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-1.jpg); height:250px; background-size:cover; border-radius:10px;"></div>
+              <div class="text fade-in">
+                <h2 class="mb-0"><a href="#">Package #1</a></h2>
+                <div class="d-flex mb-3">
+                  <span class="cat">Complete BDE Program</span>
+                  <p class="price ml-auto">$600 <span>w/ taxes</span></p>
+                </div>
+                <p class="d-flex mb-0 d-block"><a href="pricing.html" class="btn btn-primary py-2 mr-1">View Details</a> <a href="contact.html" class="btn btn-secondary py-2 ml-1">Book now</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 2 -->
+          <div class="item fade-right">
+            <div class="car-wrap rounded ftco-animate">
+              <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-2.jpg); height:250px; background-size:cover; border-radius:10px;"></div>
+              <div class="text fade-in">
+                <h2 class="mb-0"><a href="#">Package #2</a></h2>
+                <div class="d-flex mb-3">
+                  <span class="cat">BDE + Road Test</span>
+                  <p class="price ml-auto">$820 <span>w/ taxes</span></p>
+                </div>
+                <p class="d-flex mb-0 d-block"><a href="pricing.html" class="btn btn-primary py-2 mr-1">View Details</a> <a href="contact.html" class="btn btn-secondary py-2 ml-1">Book now</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 3 -->
+          <div class="item fade-right">
+            <div class="car-wrap rounded ftco-animate">
+              <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-3.jpg); height:250px; background-size:cover; border-radius:10px;"></div>
+              <div class="text fade-in">
+                <h2 class="mb-0"><a href="#">Package #3</a></h2>
+                <div class="d-flex mb-3">
+                  <span class="cat">Premium BDE Program</span>
+                  <p class="price ml-auto">$1000 <span>w/ taxes</span></p>
+                </div>
+                <p class="d-flex mb-0 d-block"><a href="pricing.html" class="btn btn-primary py-2 mr-1">View Details</a> <a href="contact.html" class="btn btn-secondary py-2 ml-1">Book now</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 4 -->
+          <div class="item fade-right">
+            <div class="car-wrap rounded ftco-animate">
+              <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-4.jpg); height:250px; background-size:cover; border-radius:10px;"></div>
+              <div class="text fade-in">
+                <h2 class="mb-0"><a href="#">Individual Lessons</a></h2>
+                <div class="d-flex mb-3">
+                  <span class="cat">G2 & G License</span>
+                  <p class="price ml-auto">From $50-55<span>/lesson</span></p>
+                </div>
+                <p class="d-flex mb-0 d-block"><a href="pricing.html" class="btn btn-primary py-2 mr-1">View Details</a> <a href="contact.html" class="btn btn-secondary py-2 ml-1">Book now</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- END carousel -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Animation Styles -->
+<style>
+/* Hidden initial state */
+.fade-in, .fade-right {
+  opacity: 0;
+  transition: all 1.2s ease;
+}
+.fade-right {
+  transform: translateX(50px);
+}
+
+/* Visible state */
+.show {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+/* Keyframes for smoother motion */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+</style>
+
+<!-- Scroll Reveal Script -->
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.fade-in, .fade-right');
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 100;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('show');
+      }
+    }
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+
+<section class="ftco-section ftco-about scroll-section">
+  <div class="container">
+    <div class="row no-gutters">
+      <!-- Left Image -->
+      <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center slide-left"
+        style="background-image: url(images/about.jpg); background-size: cover; background-position: center; min-height: 400px;">
+      </div>
+
+      <!-- Right Text -->
+      <div class="col-md-6 wrap-about ftco-animate fade-in">
+        <div class="heading-section heading-section-white pl-md-5">
+          <span class="subheading">About us</span>
+          <h2 class="mb-4">Welcome to All Season Driving School</h2>
+
+          <p>We are a professional driving school committed to providing high-quality driver education and training.
+            Our certified instructors have years of experience in teaching safe driving practices and helping students
+            pass their driving tests with confidence.</p>
+
+          <p>At All Season Driving School, we believe that learning to drive should be a positive and empowering
+            experience. Our comprehensive programs are designed to build confidence, develop essential driving skills,
+            and ensure our students become safe, responsible drivers for life.</p>
+
+          <p><a href="services.html" class="btn btn-primary py-3 px-4">View Our Courses</a></p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="carousel-car owl-carousel">
-            <div class="item">
-              <div class="car-wrap rounded ftco-animate">
-                <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-1.jpg);">
-                </div>
-                <div class="text">
-                  <h2 class="mb-0"><a href="#">Package #1</a></h2>
-                  <div class="d-flex mb-3">
-                    <span class="cat">Complete BDE Program</span>
-                    <p class="price ml-auto">$600 <span>w/ taxes</span></p>
-                  </div>
-                  <p class="d-flex mb-0 d-block"><a href="pricing.html" class="btn btn-primary py-2 mr-1">View
-                      Details</a> <a href="contact.html" class="btn btn-secondary py-2 ml-1">Book now</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="car-wrap rounded ftco-animate">
-                <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-2.jpg);">
-                </div>
-                <div class="text">
-                  <h2 class="mb-0"><a href="#">Package #2</a></h2>
-                  <div class="d-flex mb-3">
-                    <span class="cat">BDE + Road Test</span>
-                    <p class="price ml-auto">$820 <span>w/ taxes</span></p>
-                  </div>
-                  <p class="d-flex mb-0 d-block"><a href="pricing.html" class="btn btn-primary py-2 mr-1">View
-                      Details</a> <a href="contact.html" class="btn btn-secondary py-2 ml-1">Book now</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="car-wrap rounded ftco-animate">
-                <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-3.jpg);">
-                </div>
-                <div class="text">
-                  <h2 class="mb-0"><a href="#">Package #3</a></h2>
-                  <div class="d-flex mb-3">
-                    <span class="cat">Premium BDE Program</span>
-                    <p class="price ml-auto">$1000 <span>w/ taxes</span></p>
-                  </div>
-                  <p class="d-flex mb-0 d-block"><a href="pricing.html" class="btn btn-primary py-2 mr-1">View
-                      Details</a> <a href="contact.html" class="btn btn-secondary py-2 ml-1">Book now</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="car-wrap rounded ftco-animate">
-                <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-4.jpg);">
-                </div>
-                <div class="text">
-                  <h2 class="mb-0"><a href="#">Individual Lessons</a></h2>
-                  <div class="d-flex mb-3">
-                    <span class="cat">G2 & G License</span>
-                    <p class="price ml-auto">From $50-55<span>/lesson</span></p>
-                  </div>
-                  <p class="d-flex mb-0 d-block"><a href="pricing.html" class="btn btn-primary py-2 mr-1">View
-                      Details</a> <a href="contact.html" class="btn btn-secondary py-2 ml-1">Book now</a></p>
-                </div>
-              </div>
-            </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inline Animation CSS -->
+<style>
+/* Initial hidden state */
+.fade-in,
+.slide-left {
+  opacity: 0;
+  transition: all 1.2s ease;
+}
+
+/* Slide from left */
+.slide-left {
+  transform: translateX(-60px);
+}
+
+/* Visible state after scroll */
+.show {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Optional subtle motion feel */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+</style>
+
+<!-- Scroll Reveal Script -->
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.fade-in, .slide-left');
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 120;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('show');
+      }
+    }
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+
+  <section class="ftco-section scroll-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-7 text-center heading-section ftco-animate">
+        <span class="subheading">Services</span>
+        <h2 class="mb-3">Our Latest Services</h2>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-3 slide-left">
+        <div class="services services-2 w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="flaticon-wedding-car"></span>
+          </div>
+          <div class="text w-100">
+            <h3 class="heading mb-2"><b>Expert Instructors</b></h3>
+            <p>Certified, MTO-approved instructors with real-world driving and teaching experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3 slide-left">
+        <div class="services services-2 w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="flaticon-transportation"></span>
+          </div>
+          <div class="text w-100">
+            <h3 class="heading mb-2"><b>Certified Programs</b></h3>
+            <p>Beginner Driver Education (BDE) courses approved by the Ministry of Transportation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3 slide-left">
+        <div class="services services-2 w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="flaticon-car"></span>
+          </div>
+          <div class="text w-100">
+            <h3 class="heading mb-2"><b>High Success Rate</b></h3>
+            <p>Our personalized approach leads to confident drivers and high test pass rates.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3 slide-left">
+        <div class="services services-2 w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="flaticon-transportation"></span>
+          </div>
+          <div class="text w-100">
+            <h3 class="heading mb-2"><b>Affordable Rates</b></h3>
+            <p>Competitive pricing on lessons, BDE courses, and car rentals for road tests.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="ftco-section ftco-about">
-    <div class="container">
-      <div class="row no-gutters">
-        <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center"
-          style="background-image: url(images/about.jpg);">
-        </div>
-        <div class="col-md-6 wrap-about ftco-animate">
-          <div class="heading-section heading-section-white pl-md-5">
-            <span class="subheading">About us</span>
-            <h2 class="mb-4">Welcome to 1st Step Driving School</h2>
-
-            <p>We are a professional driving school committed to providing high-quality driver education and training.
-              Our certified instructors have years of experience in teaching safe driving practices and helping students
-              pass their driving tests with confidence.</p>
-            <p>At 1st Step Driving School, we believe that learning to drive should be a positive and empowering
-              experience. Our comprehensive programs are designed to build confidence, develop essential driving skills,
-              and ensure our students become safe, responsible drivers for life.</p>
-            <p><a href="services.html" class="btn btn-primary py-3 px-4">View Our Courses</a></p>
-          </div>
-        </div>
+<!-- Intro Section -->
+<section class="ftco-section ftco-intro" style="background-image: url(images/license4.jpg); background-size:cover; background-position:center;">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="col-md-6 heading-section heading-section-white ftco-animate">
+        <h2 class="mb-3">Ready to Start Your Driving Journey? Book Your First Lesson Today!</h2>
+        <a href="contact.html" class="btn btn-primary btn-lg">Book a Lesson</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="ftco-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-7 text-center heading-section ftco-animate">
-          <span class="subheading">Services</span>
-          <h2 class="mb-3">Our Latest Services</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="services services-2 w-100 text-center">
-            <div class="icon d-flex align-items-center justify-content-center"><span
-                class="flaticon-wedding-car"></span></div>
-            <div class="text w-100">
-              <h3 class="heading mb-2"> <b>Expert Instructors</b></h3>
-              <p>Certified, MTO-approved instructors with real-world driving and teaching experience.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="services services-2 w-100 text-center">
-            <div class="icon d-flex align-items-center justify-content-center"><span
-                class="flaticon-transportation"></span></div>
-            <div class="text w-100">
-              <h3 class="heading mb-2"><b> Certified Programs </b></h3>
-              <p>Beginner Driver Education (BDE) courses approved by the Ministry of Transportation.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="services services-2 w-100 text-center">
-            <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car"></span></div>
-            <div class="text w-100">
-              <h3 class="heading mb-2"><b>High Success Rate</b></h3>
-              <p>Our personalized approach leads to confident drivers and high test pass rates.
+<!-- Inline Animation CSS -->
+<style>
+/* Initial hidden state */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1s ease;
+}
 
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="services services-2 w-100 text-center">
-            <div class="icon d-flex align-items-center justify-content-center"><span
-                class="flaticon-transportation"></span></div>
-            <div class="text w-100">
-              <h3 class="heading mb-2"><b>Affordable Rates</b></h3>
-              <p>Competitive pricing on lessons, BDE courses, and car rentals for road tests.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+/* Reveal when in view */
+.show {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
 
-  <section class="ftco-section ftco-intro" style="background-image: url(images/license4.jpg);">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row justify-content-end">
-        <div class="col-md-6 heading-section heading-section-white ftco-animate">
-          <h2 class="mb-3">Ready to Start Your Driving Journey? Book Your First Lesson Today!</h2>
-          <a href="contact.html" class="btn btn-primary btn-lg">Book a Lesson</a>
-        </div>
-      </div>
-    </div>
-  </section>
+/* Optional: slight staggered delay for sequence effect */
+.slide-left:nth-child(1) { transition-delay: 0.1s; }
+.slide-left:nth-child(2) { transition-delay: 0.2s; }
+.slide-left:nth-child(3) { transition-delay: 0.3s; }
+.slide-left:nth-child(4) { transition-delay: 0.4s; }
+</style>
+
+<!-- Scroll Reveal JS -->
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.slide-left');
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 120;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('show');
+      }
+    }
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
 
 
   <section class="ftco-section testimony-section bg-light">
@@ -642,13 +794,13 @@
       <div class="row mb-5">
         <div class="col-md">
           <div class="ftco-footer-widget mb-4">
-            <!-- <h2 class="ftco-heading-2"><a href="#" class="logo">1st Step<span> Car Driving School</span></a></h2> -->
+            <!-- <h2 class="ftco-heading-2"><a href="#" class="logo">All Season<span> Driving School</span></a></h2> -->
             <h2 class="ftco-heading-2">
               <a href="#" class="logo"
                 style="display: flex; align-items: center; text-decoration: none;  background-color: transparent">
-                <img src="images/logo.png" alt="1st Step Car Driving School Logo"
+                <img src="images/logo.png" alt="All Season Driving School Logo"
                   style="height: 50px; margin-right: 10px;">
-                <span style="color: #f4f0f0; font-size: 20px;">1st Step <span style="font-weight: bold;">Car Driving
+                <span style="color: #f4f0f0; font-size: 20px;"> All Season <span style="font-weight: bold;">Car Driving
                     School</span></span>
               </a>
             </h2>
@@ -694,8 +846,8 @@
                     1C6</span></li>
                 <li><a href="tel:(647) 770-7811"><span class="icon icon-phone"></span><span class="text">(647)
                       770-7811</span></a></li>
-                <li><a href="mailto:1ststepcardrivingschool@gmail.com"><span class="icon icon-envelope"></span><span
-                      class="text"> &nbsp;&nbsp;1ststepcardrivingschool@gmail.com</span></a></li>
+                <li><a href="mailto:allseasondriving@gmail.com"><span class="icon icon-envelope"></span><span
+                      class="text"> &nbsp;&nbsp;allseasondriving@gmail.com</span></a></li>
               </ul>
             </div>
           </div>
@@ -706,7 +858,7 @@
 
           <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> All rights reserved by 1st Step Car Driving School
+            <script>document.write(new Date().getFullYear());</script> All rights reserved by All Season Driving School
             </p>
         </div>
       </div>
@@ -744,7 +896,7 @@
 
   <!-- WhatsApp Floating Button -->
   <div class="whatsapp-float">
-    <a href="https://wa.me/16477707811?text=Hi! I'm interested in driving lessons with 1st Step Car Driving School. Can you help me with more information?"
+    <a href="https://wa.me/16477707811?text=Hi! I'm interested in driving lessons with All Season Driving School. Can you help me with more information?"
       target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path
