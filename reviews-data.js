@@ -177,7 +177,7 @@ const studentReviews = [
         rating: 5,
         date: "October 15, 2024",
         license: "G License",
-        review: "Amazing Instructor, he taught me so well the rules as well as the practical implications of the rules on road. I passed my G2 test in the first try. Very friendly and experienced, if you new to driving I highly recommend 1st Step Car driving school. They also provide service in different languages, also the price is very reasonable, a must try driving school.",
+        review: "Amazing Instructor, he taught me so well the rules as well as the practical implications of the rules on road. I passed my G2 test in the first try. Very friendly and experienced, if you new to driving I highly recommend All Season Driving School. They also provide service in different languages, also the price is very reasonable, a must try driving school.",
         instructor: "Tahir Mirza"
     },
     {
@@ -287,7 +287,7 @@ const studentReviews = [
         rating: 5,
         date: "October 15, 2024",
         license: "G License",
-        review: "I took classes from tahir mirza which i found to be very helpful and was able to pass my G2 test in first attempt. The teaching method was easy and comprehensive which covered how to tackle real drive test scenarios . He is patient and kind as an instructor, would definitely recommend 1st step car driving school to anyone who is looking to get their license with ease. 10/10 for the guidance.",
+        review: "I took classes from tahir mirza which i found to be very helpful and was able to pass my G2 test in first attempt. The teaching method was easy and comprehensive which covered how to tackle real drive test scenarios . He is patient and kind as an instructor, would definitely recommend All Season Driving School to anyone who is looking to get their license with ease. 10/10 for the guidance.",
         instructor: "Tahir Mirza"
     },
     {

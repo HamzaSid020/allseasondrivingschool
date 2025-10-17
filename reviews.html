@@ -1,362 +1,1053 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Student Reviews - 1st Step Car Driving School</title>
+<head>
+    <title>Student Reviews - All Season Driving School</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/theme-overrides.css">
-    <link rel="stylesheet" href="css/whatsapp-button.css">
-  </head>
-  <body>
-    
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html"> <img src= "images/logo.png" alt="1st Step Car Driving School Logo" style="height: 50px; margin-right: 10px;">  Car Driving School</span></a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f97316;
+            --success: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-	          <!-- <li class="nav-item"><a href="car.html" class="nav-link">Cars</a></li> -->
-	          <li class="nav-item active"><a href="reviews.html" class="nav-link">Reviews</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
-    
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/newbg2.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-          <div class="col-md-9 ftco-animate pb-5">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Student Reviews <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread">Student Reviews</h1>
-          </div>
-        </div>
-      </div>
-    </section>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <section class="ftco-section">
-      <div class="container">
-        <!-- Reviews Header -->
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center">
-            <h2 class="mb-4">What Our Students Say</h2>
-            <p class="lead">Read testimonials from our successful students who have passed their driving tests</p>
-            <div class="stats-row mt-4">
-              <div class="row">
-                <div class="col-md-3 col-6 mb-3">
-                  <div class="stat-item text-center">
-                    <div class="stat-number text-primary font-weight-bold">500+</div>
-                    <div class="stat-label">Students Passed</div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-6 mb-3">
-                  <div class="stat-item text-center">
-                    <div class="stat-number text-success font-weight-bold">98%</div>
-                    <div class="stat-label">Pass Rate</div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-6 mb-3">
-                  <div class="stat-item text-center">
-                    <div class="stat-number text-info font-weight-bold">4.9</div>
-                    <div class="stat-label">Average Rating</div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-6 mb-3">
-                  <div class="stat-item text-center">
-                    <div class="stat-number text-warning font-weight-bold">5</div>
-                    <div class="stat-label">Star Reviews</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
 
-        <!-- Reviews Grid -->
-        <div class="row" id="reviews-container">
-          <!-- Reviews will be loaded here via JavaScript -->
-        </div>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-        <!-- Pagination -->
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="pagination-container">
-              <nav aria-label="Reviews pagination">
-                <ul class="pagination justify-content-center" id="pagination">
-                  <!-- Pagination will be generated via JavaScript -->
+        /* Header & Navigation */
+        header {
+            background: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .page-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeUp 1s ease;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .breadcrumbs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs a {
+            color: #e2e8f0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumbs a:hover {
+            color: white;
+        }
+
+        .breadcrumbs span {
+            color: #e2e8f0;
+            margin: 0 10px;
+        }
+
+        /* Reviews Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--light);
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .stat-number.primary {
+            color: var(--primary);
+        }
+
+        .stat-number.success {
+            color: var(--success);
+        }
+
+        .stat-number.info {
+            color: var(--primary);
+        }
+
+        .stat-number.warning {
+            color: var(--secondary);
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Reviews Grid */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .review-header {
+            padding: 25px 25px 15px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            border: 3px solid var(--primary);
+        }
+
+        .reviewer-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .reviewer-details h4 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .reviewer-details .license {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .review-rating {
+            color: #fbbf24;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .review-date {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        .review-content {
+            padding: 20px 25px;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .review-instructor {
+            display: flex;
+            align-items: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .review-instructor i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        /* Pagination */
+        .pagination-container {
+            margin-top: 50px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .page-item {
+            margin: 0 5px;
+        }
+
+        .page-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .page-link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .page-item.active .page-link {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .page-item.disabled .page-link {
+            color: #cbd5e1;
+            border-color: #e2e8f0;
+            cursor: not-allowed;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(37, 99, 235, 0.9)), url('https://images.unsplash.com/photo-1599156480040-87d5eefeb5d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            color: #e2e8f0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: #ea580c;
+        }
+
+        .btn-light {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-light:hover {
+            background: #f8fafc;
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+        }
+
+        .whatsapp-float a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .whatsapp-float a:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float i {
+            font-size: 1.8rem;
+        }
+
+        .whatsapp-float .tooltip {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: var(--dark);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float a:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reviewer-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .reviewer-avatar {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="https://i.imgur.com/8nKyLQp.png" alt="All Season Driving School">
+                    <span class="logo-text">All Season Driving School</span>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="reviews.html" class="active">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-              </nav>
-            </div>
-          </div>
+            </nav>
         </div>
-      </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span><i class="fas fa-chevron-right"></i></span>
+                    <span>Student Reviews</span>
+                </div>
+                <h1>What Our Students Say</h1>
+                <p>Read testimonials from our successful students who have passed their driving tests</p>
+            </div>
+        </div>
     </section>
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <!-- <h2 class="ftco-heading-2"><a href="#" class="logo">1st Step<span> Car Driving School</span></a></h2> -->
-              <h2 class="ftco-heading-2">
-                <a href="#" class="logo" style="display: flex; align-items: center; text-decoration: none;  background-color: transparent">
-                  <img src="images/logo.png" alt="1st Step Car Driving School Logo" style="height: 50px; margin-right: 10px;">
-                  <span style="color: #f4f0f0; font-size: 20px;">1st Step <span style="font-weight: bold;">Car Driving School</span></span>
-                </a>
-              </h2>
-              <p>Professional driving instruction from certified instructors. Get your driver's license with our comprehensive training programs designed for all skill levels.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                <li class="ftco-animate"><a href = "#"><span class="icon-whatsapp"></span></a></li>
-              </ul>
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-number primary">500+</div>
+                    <div class="stat-label">Students Passed</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number success">98%</div>
+                    <div class="stat-label">Pass Rate</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number info">4.9</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-number warning">5</div>
+                    <div class="stat-label">Star Reviews</div>
+                </div>
             </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Information</h2>
-              <ul class="list-unstyled">
-                <li><a href="about.html" class="py-2 d-block">About</a></li>
-                <li><a href="services.html" class="py-2 d-block">Services</a></li>
-                <li><a href="terms.html" class="py-2 d-block">Terms and Conditions</a></li>
-                <li><a href="guarantee.html" class="py-2 d-block">Best Price Guarantee</a></li>
-                <li><a href="privacy.html" class="py-2 d-block">Privacy &amp; Cookies Policy</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Customer Support</h2>
-              <ul class="list-unstyled">
-                <li><a href="faq.html" class="py-2 d-block">FAQ</a></li>
-                <li><a href="payment.html" class="py-2 d-block">Payment Options</a></li>
-                <li><a href="booking.html" class="py-2 d-block">Booking Tips</a></li>
-                <li><a href="how-it-works.html" class="py-2 d-block">How it works</a></li>
-                <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">1151 Dundas St W, Mississauga, ON L5C 1C6</span></li>
-	                <li><a href="tel:(647) 770-7811"><span class="icon icon-phone"></span><span class="text">(647) 770-7811</span></a></li>
-	                <li><a href="mailto:1ststepcardrivingschool@gmail.com"><span class="icon icon-envelope"></span><span class="text"> &nbsp;&nbsp;1ststepcardrivingschool@gmail.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+    </section>
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by 1st Step Car Driving School </p>
-          </div>
+    <!-- Reviews Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Student Success Stories</h2>
+                <p>Hear from our students about their journey to becoming confident, licensed drivers</p>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="reviews-grid" id="reviews-container">
+                <!-- Reviews will be loaded here via JavaScript -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination-container">
+                <nav aria-label="Reviews pagination">
+                    <ul class="pagination" id="pagination">
+                        <!-- Pagination will be generated via JavaScript -->
+                    </ul>
+                </nav>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Ready to Join Our Success Stories?</h2>
+                <p>Start your driving journey today and become our next success story</p>
+                <a href="contact.html" class="btn btn-light">Book Your First Lesson</a>
+                <a href="tel:(905) 226-0077" class="btn btn-secondary">Call Now: (905) 226-0077</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>All Season Driving School</h3>
+                    <p>Professional driving instruction from certified instructors. Get your driver's license with our comprehensive training programs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 5428 Tenth Line W, Mississauga, ON L5M 0N1</li>
+                        <li><i class="fas fa-phone"></i> (905) 226-0077</li>
+                        <li><i class="fas fa-envelope"></i> allseasondrivingschool@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <script>document.write(new Date().getFullYear());</script> All Season Driving School. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-    
-  
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/9052260077?text=Hi! I'm interested in driving lessons with All Season Driving School. Can you help me with more information?" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">Chat with us on WhatsApp!</span>
+        </a>
+    </div>
 
+    <!-- JavaScript -->
+    <script>
+        // Reviews page functionality
+        let currentPage = 1;
+        const reviewsPerPage = 6;
+        let allReviews = [];
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-  <script src="reviews-data.js"></script>
-  
-  <script>
-    // Reviews page functionality
-    let currentPage = 1;
-    const reviewsPerPage = 6;
-    let allReviews = [];
-
-    // Load reviews data
-    function loadReviews() {
-      // If reviews-data.js is loaded, use it; otherwise use fallback data
-      if (typeof studentReviews !== 'undefined') {
-        allReviews = studentReviews;
-      } else {
-        // Fallback data in case the external file doesn't load
-        allReviews = [
-          {
-            id: 1,
-            name: "Sarah Johnson",
-            image: "images/person_1.jpg",
-            rating: 5,
-            date: "December 15, 2024",
-            license: "G2 License",
-            review: "Amazing experience with 1st Step! My instructor was patient and professional. I passed my G2 test on the first try.",
-            instructor: "Mike Chen"
-          },
-          {
-            id: 2,
-            name: "David Rodriguez",
-            image: "images/person_2.jpg",
-            rating: 5,
-            date: "December 10, 2024",
-            license: "G License",
-            review: "I was nervous about getting my G license, but the instructors at 1st Step made the process smooth and stress-free.",
-            instructor: "Lisa Thompson"
-          }
+        // Sample reviews data
+        const studentReviews = [
+            {
+                id: 1,
+                name: "Sarah Johnson",
+                image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+                rating: 5,
+                date: "December 15, 2024",
+                license: "G2 License",
+                review: "Amazing experience with 1st Step! My instructor was patient and professional. I passed my G2 test on the first try thanks to their excellent training methods.",
+                instructor: "Mike Chen"
+            },
+            {
+                id: 2,
+                name: "David Rodriguez",
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+                rating: 5,
+                date: "December 10, 2024",
+                license: "G License",
+                review: "I was nervous about getting my G license, but the instructors at 1st Step made the process smooth and stress-free. Highly recommended!",
+                instructor: "Lisa Thompson"
+            },
+            {
+                id: 3,
+                name: "Emily Chen",
+                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+                rating: 5,
+                date: "November 28, 2024",
+                license: "G2 License",
+                review: "The instructors are incredibly knowledgeable and make you feel comfortable behind the wheel. I went from zero driving experience to passing my test in just a few weeks!",
+                instructor: "James Wilson"
+            },
+            {
+                id: 4,
+                name: "Michael Brown",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+                rating: 5,
+                date: "November 20, 2024",
+                license: "G License",
+                review: "Professional, patient, and effective instruction. The road test preparation was spot-on and helped me pass with confidence.",
+                instructor: "Sarah Martinez"
+            },
+            {
+                id: 5,
+                name: "Jennifer Lee",
+                image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+                rating: 5,
+                date: "November 15, 2024",
+                license: "G2 License",
+                review: "I tried another driving school before and didn't feel confident. 1st Step made all the difference - their teaching approach is exceptional.",
+                instructor: "Robert Taylor"
+            },
+            {
+                id: 6,
+                name: "Alex Thompson",
+                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+                rating: 5,
+                date: "November 8, 2024",
+                license: "G License",
+                review: "The highway driving lessons were incredibly helpful. My instructor prepared me perfectly for the G test requirements.",
+                instructor: "Maria Garcia"
+            },
+            {
+                id: 7,
+                name: "Priya Patel",
+                image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+                rating: 5,
+                date: "October 30, 2024",
+                license: "G2 License",
+                review: "As an international student, I was nervous about driving in Canada. 1st Step made me feel comfortable and confident on the road.",
+                instructor: "David Kim"
+            },
+            {
+                id: 8,
+                name: "Kevin Wilson",
+                image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+                rating: 5,
+                date: "October 22, 2024",
+                license: "G License",
+                review: "Excellent instruction and flexible scheduling. The instructors really care about your success and go above and beyond.",
+                instructor: "Amanda Scott"
+            },
+            {
+                id: 9,
+                name: "Lisa Zhang",
+                image: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+                rating: 5,
+                date: "October 15, 2024",
+                license: "G2 License",
+                review: "The defensive driving techniques I learned have made me a much safer driver. Thank you for the excellent training!",
+                instructor: "Chris Evans"
+            }
         ];
-      }
-      displayReviews();
-      setupPagination();
-    }
 
-    // Display reviews for current page
-    function displayReviews() {
-      const container = document.getElementById('reviews-container');
-      const startIndex = (currentPage - 1) * reviewsPerPage;
-      const endIndex = startIndex + reviewsPerPage;
-      const pageReviews = allReviews.slice(startIndex, endIndex);
+        // Load reviews data
+        function loadReviews() {
+            allReviews = studentReviews;
+            displayReviews();
+            setupPagination();
+        }
 
-      container.innerHTML = '';
+        // Display reviews for current page
+        function displayReviews() {
+            const container = document.getElementById('reviews-container');
+            const startIndex = (currentPage - 1) * reviewsPerPage;
+            const endIndex = startIndex + reviewsPerPage;
+            const pageReviews = allReviews.slice(startIndex, endIndex);
 
-      pageReviews.forEach(review => {
-        const reviewCard = createReviewCard(review);
-        container.appendChild(reviewCard);
-      });
-    }
+            container.innerHTML = '';
 
-    // Create review card HTML
-    function createReviewCard(review) {
-      const col = document.createElement('div');
-      col.className = 'col-lg-4 col-md-6 mb-4';
-      
-      const stars = '★'.repeat(review.rating);
-      
-      col.innerHTML = `
-        <div class="review-card card h-100 shadow-sm border-0">
-          <div class="card-body p-4">
-            <div class="d-flex align-items-center mb-3">
-              <img src="${review.image}" alt="${review.name}" class="rounded-circle mr-3" style="width: 60px; height: 60px; object-fit: cover;">
-              <div>
-                <h5 class="mb-1">${review.name}</h5>
-                <div class="text-warning mb-1">${stars}</div>
-                <small class="text-muted">${review.license}</small>
-              </div>
-            </div>
-            <p class="review-text mb-3">"${review.review}"</p>
-            <div class="review-footer">
-              <small class="text-muted">
-                <i class="ion-ios-person mr-1"></i>Instructor: ${review.instructor}
-              </small>
-              <br>
-              <small class="text-muted">
-                <i class="ion-ios-calendar mr-1"></i>${review.date}
-              </small>
-            </div>
-          </div>
-        </div>
-      `;
-      
-      return col;
-    }
+            pageReviews.forEach(review => {
+                const reviewCard = createReviewCard(review);
+                container.appendChild(reviewCard);
+            });
+        }
 
-    // Setup pagination
-    function setupPagination() {
-      const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
-      const pagination = document.getElementById('pagination');
-      
-      pagination.innerHTML = '';
-      
-      // Previous button
-      const prevLi = document.createElement('li');
-      prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
-      prevLi.innerHTML = `<a class="page-link" href="#" onclick="changePage(${currentPage - 1})">Previous</a>`;
-      pagination.appendChild(prevLi);
-      
-      // Page numbers
-      for (let i = 1; i <= totalPages; i++) {
-        const li = document.createElement('li');
-        li.className = `page-item ${i === currentPage ? 'active' : ''}`;
-        li.innerHTML = `<a class="page-link" href="#" onclick="changePage(${i})">${i}</a>`;
-        pagination.appendChild(li);
-      }
-      
-      // Next button
-      const nextLi = document.createElement('li');
-      nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
-      nextLi.innerHTML = `<a class="page-link" href="#" onclick="changePage(${currentPage + 1})">Next</a>`;
-      pagination.appendChild(nextLi);
-    }
+        // Create review card HTML
+        function createReviewCard(review) {
+            const col = document.createElement('div');
+            col.className = 'fade-in';
+            
+            const stars = '★'.repeat(review.rating);
+            
+            col.innerHTML = `
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <img src="${review.image}" alt="${review.name}">
+                            </div>
+                            <div class="reviewer-details">
+                                <h4>${review.name}</h4>
+                                <div class="license">${review.license}</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">${stars}</div>
+                        <div class="review-date">${review.date}</div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"${review.review}"</p>
+                        <div class="review-instructor">
+                            <i class="fas fa-user-graduate"></i>
+                            Instructor: ${review.instructor}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            return col;
+        }
 
-    // Change page
-    function changePage(page) {
-      const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
-      if (page >= 1 && page <= totalPages) {
-        currentPage = page;
-        displayReviews();
-        setupPagination();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    }
+        // Setup pagination
+        function setupPagination() {
+            const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
+            const pagination = document.getElementById('pagination');
+            
+            pagination.innerHTML = '';
+            
+            // Previous button
+            const prevLi = document.createElement('li');
+            prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
+            prevLi.innerHTML = `<a class="page-link" href="#" onclick="changePage(${currentPage - 1})"><i class="fas fa-chevron-left"></i></a>`;
+            pagination.appendChild(prevLi);
+            
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const li = document.createElement('li');
+                li.className = `page-item ${i === currentPage ? 'active' : ''}`;
+                li.innerHTML = `<a class="page-link" href="#" onclick="changePage(${i})">${i}</a>`;
+                pagination.appendChild(li);
+            }
+            
+            // Next button
+            const nextLi = document.createElement('li');
+            nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
+            nextLi.innerHTML = `<a class="page-link" href="#" onclick="changePage(${currentPage + 1})"><i class="fas fa-chevron-right"></i></a>`;
+            pagination.appendChild(nextLi);
+        }
 
-    // Initialize when page loads
-    document.addEventListener('DOMContentLoaded', function() {
-      loadReviews();
-    });
-  </script>
-  
-  <!-- WhatsApp Floating Button -->
-  <div class="whatsapp-float">
-    <a href="https://wa.me/16477707811?text=Hi! I'm interested in driving lessons with 1st Step Car Driving School. Can you help me with more information?" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-      </svg>
-      <span class="tooltip">Chat with us on WhatsApp!</span>
-    </a>
-  </div>
-    
-  </body>
+        // Change page
+        function changePage(page) {
+            const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
+            if (page >= 1 && page <= totalPages) {
+                currentPage = page;
+                displayReviews();
+                setupPagination();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReviews();
+            
+            // Mobile Menu Toggle
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Scroll Animation
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const appearOnScroll = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(element => {
+                appearOnScroll.observe(element);
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
 </html>

@@ -2,8 +2,8 @@
 var google;
 
 function init() {
-    // Coordinates for 1st Step Car Driving School in Mississauga
-    // 1151 Dundas St W, Mississauga, ON L5C 1C6
+    // Coordinates for All Season Driving School in Mississauga
+    // 5428 Tenth Line W, Mississauga, ON L5M 0N1
     var myLatlng = new google.maps.LatLng(43.5890, -79.6441);
     
     var mapOptions = {
@@ -45,7 +45,7 @@ function init() {
     var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
-        title: '1st Step Car Driving School',
+        title: 'All Season Driving School',
         icon: {
             url: 'images/loc.png',
             scaledSize: new google.maps.Size(32, 32)
@@ -54,7 +54,7 @@ function init() {
 
     // Add info window
     var infoWindow = new google.maps.InfoWindow({
-        content: '<div style="padding: 10px;"><h5 style="margin: 0 0 5px 0; color: #333;">1st Step Car Driving School</h5><p style="margin: 0; color: #666;">1151 Dundas St W<br>Mississauga, ON L5C 1C6</p></div>'
+        content: '<div style="padding: 10px;"><h5 style="margin: 0 0 5px 0; color: #333;">All Season Driving School</h5><p style="margin: 0; color: #666;">1151 Dundas St W<br>Mississauga, ON L5C 1C6</p></div>'
     });
 
     // Add click listener to marker
