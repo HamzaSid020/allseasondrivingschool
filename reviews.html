@@ -11,6 +11,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Elfsight Google Reviews -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    
     <style>
         :root {
             --primary: #2563eb;
@@ -63,17 +66,25 @@
         .logo {
             display: flex;
             align-items: center;
+            gap: 10px;
         }
 
         .logo img {
+            width: 50px;
             height: 50px;
-            margin-right: 10px;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .logo img:hover {
+            transform: rotate(5deg) scale(1.05);
         }
 
         .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e293b;
+            letter-spacing: 0.5px;
         }
 
         .nav-links {
@@ -163,7 +174,7 @@
             margin: 0 10px;
         }
 
-        /* Reviews Section */
+        /* Sections */
         .section {
             padding: 80px 0;
         }
@@ -235,6 +246,11 @@
         .stat-label {
             color: var(--gray);
             font-size: 1.1rem;
+        }
+
+        /* Google Reviews Widget */
+        .google-reviews {
+            margin: 40px 0;
         }
 
         /* Reviews Grid */
@@ -396,6 +412,7 @@
             color: #e2e8f0;
         }
 
+        /* Buttons */
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -409,6 +426,7 @@
             cursor: pointer;
             box-shadow: var(--shadow);
             font-size: 1rem;
+            margin: 5px;
         }
 
         .btn:hover {
@@ -670,7 +688,7 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <img src="https://i.imgur.com/8nKyLQp.png" alt="All Season Driving School">
+                    <img src="images/logo.png" alt="All Season Driving School">
                     <span class="logo-text">All Season Driving School</span>
                 </div>
                 <div class="mobile-menu">
@@ -727,26 +745,15 @@
         </div>
     </section>
 
-    <!-- Reviews Section -->
+    <!-- Google Reviews Widget -->
     <section class="section">
         <div class="container">
             <div class="section-title fade-in">
                 <h2>Student Success Stories</h2>
                 <p>Hear from our students about their journey to becoming confident, licensed drivers</p>
             </div>
-
-            <!-- Reviews Grid -->
-            <div class="reviews-grid" id="reviews-container">
-                <!-- Reviews will be loaded here via JavaScript -->
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination-container">
-                <nav aria-label="Reviews pagination">
-                    <ul class="pagination" id="pagination">
-                        <!-- Pagination will be generated via JavaScript -->
-                    </ul>
-                </nav>
+            <div class="google-reviews">
+                <div class="elfsight-app-931706d0-de1a-4b62-a3ee-db70d34c722f" data-elfsight-app-lazy></div>
             </div>
         </div>
     </section>
@@ -819,204 +826,8 @@
 
     <!-- JavaScript -->
     <script>
-        // Reviews page functionality
-        let currentPage = 1;
-        const reviewsPerPage = 6;
-        let allReviews = [];
-
-        // Sample reviews data
-        const studentReviews = [
-            {
-                id: 1,
-                name: "Sarah Johnson",
-                image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-                rating: 5,
-                date: "December 15, 2024",
-                license: "G2 License",
-                review: "Amazing experience with 1st Step! My instructor was patient and professional. I passed my G2 test on the first try thanks to their excellent training methods.",
-                instructor: "Mike Chen"
-            },
-            {
-                id: 2,
-                name: "David Rodriguez",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-                rating: 5,
-                date: "December 10, 2024",
-                license: "G License",
-                review: "I was nervous about getting my G license, but the instructors at 1st Step made the process smooth and stress-free. Highly recommended!",
-                instructor: "Lisa Thompson"
-            },
-            {
-                id: 3,
-                name: "Emily Chen",
-                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-                rating: 5,
-                date: "November 28, 2024",
-                license: "G2 License",
-                review: "The instructors are incredibly knowledgeable and make you feel comfortable behind the wheel. I went from zero driving experience to passing my test in just a few weeks!",
-                instructor: "James Wilson"
-            },
-            {
-                id: 4,
-                name: "Michael Brown",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-                rating: 5,
-                date: "November 20, 2024",
-                license: "G License",
-                review: "Professional, patient, and effective instruction. The road test preparation was spot-on and helped me pass with confidence.",
-                instructor: "Sarah Martinez"
-            },
-            {
-                id: 5,
-                name: "Jennifer Lee",
-                image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-                rating: 5,
-                date: "November 15, 2024",
-                license: "G2 License",
-                review: "I tried another driving school before and didn't feel confident. 1st Step made all the difference - their teaching approach is exceptional.",
-                instructor: "Robert Taylor"
-            },
-            {
-                id: 6,
-                name: "Alex Thompson",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-                rating: 5,
-                date: "November 8, 2024",
-                license: "G License",
-                review: "The highway driving lessons were incredibly helpful. My instructor prepared me perfectly for the G test requirements.",
-                instructor: "Maria Garcia"
-            },
-            {
-                id: 7,
-                name: "Priya Patel",
-                image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-                rating: 5,
-                date: "October 30, 2024",
-                license: "G2 License",
-                review: "As an international student, I was nervous about driving in Canada. 1st Step made me feel comfortable and confident on the road.",
-                instructor: "David Kim"
-            },
-            {
-                id: 8,
-                name: "Kevin Wilson",
-                image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-                rating: 5,
-                date: "October 22, 2024",
-                license: "G License",
-                review: "Excellent instruction and flexible scheduling. The instructors really care about your success and go above and beyond.",
-                instructor: "Amanda Scott"
-            },
-            {
-                id: 9,
-                name: "Lisa Zhang",
-                image: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-                rating: 5,
-                date: "October 15, 2024",
-                license: "G2 License",
-                review: "The defensive driving techniques I learned have made me a much safer driver. Thank you for the excellent training!",
-                instructor: "Chris Evans"
-            }
-        ];
-
-        // Load reviews data
-        function loadReviews() {
-            allReviews = studentReviews;
-            displayReviews();
-            setupPagination();
-        }
-
-        // Display reviews for current page
-        function displayReviews() {
-            const container = document.getElementById('reviews-container');
-            const startIndex = (currentPage - 1) * reviewsPerPage;
-            const endIndex = startIndex + reviewsPerPage;
-            const pageReviews = allReviews.slice(startIndex, endIndex);
-
-            container.innerHTML = '';
-
-            pageReviews.forEach(review => {
-                const reviewCard = createReviewCard(review);
-                container.appendChild(reviewCard);
-            });
-        }
-
-        // Create review card HTML
-        function createReviewCard(review) {
-            const col = document.createElement('div');
-            col.className = 'fade-in';
-            
-            const stars = '★'.repeat(review.rating);
-            
-            col.innerHTML = `
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">
-                                <img src="${review.image}" alt="${review.name}">
-                            </div>
-                            <div class="reviewer-details">
-                                <h4>${review.name}</h4>
-                                <div class="license">${review.license}</div>
-                            </div>
-                        </div>
-                        <div class="review-rating">${stars}</div>
-                        <div class="review-date">${review.date}</div>
-                    </div>
-                    <div class="review-content">
-                        <p class="review-text">"${review.review}"</p>
-                        <div class="review-instructor">
-                            <i class="fas fa-user-graduate"></i>
-                            Instructor: ${review.instructor}
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            return col;
-        }
-
-        // Setup pagination
-        function setupPagination() {
-            const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
-            const pagination = document.getElementById('pagination');
-            
-            pagination.innerHTML = '';
-            
-            // Previous button
-            const prevLi = document.createElement('li');
-            prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
-            prevLi.innerHTML = `<a class="page-link" href="#" onclick="changePage(${currentPage - 1})"><i class="fas fa-chevron-left"></i></a>`;
-            pagination.appendChild(prevLi);
-            
-            // Page numbers
-            for (let i = 1; i <= totalPages; i++) {
-                const li = document.createElement('li');
-                li.className = `page-item ${i === currentPage ? 'active' : ''}`;
-                li.innerHTML = `<a class="page-link" href="#" onclick="changePage(${i})">${i}</a>`;
-                pagination.appendChild(li);
-            }
-            
-            // Next button
-            const nextLi = document.createElement('li');
-            nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
-            nextLi.innerHTML = `<a class="page-link" href="#" onclick="changePage(${currentPage + 1})"><i class="fas fa-chevron-right"></i></a>`;
-            pagination.appendChild(nextLi);
-        }
-
-        // Change page
-        function changePage(page) {
-            const totalPages = Math.ceil(allReviews.length / reviewsPerPage);
-            if (page >= 1 && page <= totalPages) {
-                currentPage = page;
-                displayReviews();
-                setupPagination();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
-
-        // Initialize when page loads
+          // Initialize when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            loadReviews();
             
             // Mobile Menu Toggle
             const mobileMenu = document.querySelector('.mobile-menu');
@@ -1028,7 +839,6 @@
 
             // Scroll Animation
             const fadeElements = document.querySelectorAll('.fade-in');
-
             const appearOnScroll = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
