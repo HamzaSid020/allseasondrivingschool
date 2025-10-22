@@ -358,19 +358,39 @@
             color: #222;
         }
 
-        .package-price {
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--primary);
+        /* Package Price Section */
+        .package-price-container {
+            text-align: center;
             margin-bottom: 15px;
         }
 
+        .package-price {
+            font-size: 22px;
+            font-weight: 700;
+            /* Made bolder */
+            color: var(--primary);
+            display: block;
+            /* Makes it take full width */
+        }
+
+        .package-tax {
+            font-size: 8px;
+            color: var(--gray);
+            display: block;
+            /* Makes it take full width */
+        }
+
+        /* Package Features */
         .package-features {
             list-style: none;
             padding: 0;
             margin-bottom: 25px;
             flex-grow: 1;
             min-height: 150px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
         }
 
         .package-features li {
@@ -378,13 +398,23 @@
             font-size: 14px;
             margin: 8px 0;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
         }
 
         .package-features i {
             color: var(--primary);
             margin-right: 8px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Certificate text */
+        .package-certificate {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 10px;
+            font-style: italic;
+            text-align: center;
         }
 
         .premium {
@@ -1019,14 +1049,21 @@
                     <div class="package-img" style="background-image: url('images/car-1.png');"></div>
                     <div class="package-content">
                         <h3>Complete BDE Program</h3>
-                        <div class="package-price">$749</div>
+                        <div class="package-price-container">
+                            <div class="package-price">$600</div>
+                            <div class="package-tax">+ Tax & MTO Fee</div>
+                        </div>
                         <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 20 hours in-class instruction</li>
-                            <li><i class="fas fa-check"></i> 10 hours in-car training</li>
-                            <li><i class="fas fa-check"></i> MTO-approved curriculum</li>
-                            <li><i class="fas fa-check"></i> Insurance discount certificate</li>
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
+                            <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
                         </ul>
                         <a href="pricing.html" class="btn">View Details</a>
+                        <div class="package-certificate">MTO Certificate upon Course completion</div>
                     </div>
                 </div>
 
@@ -1034,47 +1071,69 @@
                 <div class="package-card fade-in">
                     <div class="package-img" style="background-image: url('images/car-2.png');"></div>
                     <div class="package-content">
-                        <h3>BDE + Road Test</h3>
-                        <div class="package-price">$749</div>
+                        <h3>Complete BDE Program</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$750</div>
+                            <div class="package-tax">+ Tax & MTO Fee</div>
+                        </div>
                         <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Complete BDE Program</li>
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of In-car training</li>
                             <li><i class="fas fa-check"></i> Road test preparation</li>
-                            <li><i class="fas fa-check"></i> Use of our vehicle for road test</li>
-                            <li><i class="fas fa-check"></i> Pickup and dropoff for test</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
+                            <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Use Driving school vehicle for your Road test</li>
                         </ul>
                         <a href="pricing.html" class="btn">View Details</a>
+                        <div class="package-certificate">MTO Certificate upon Course completion</div>
                     </div>
                 </div>
 
                 <!-- Package 3 -->
                 <div class="package-card fade-in">
-                    <div class="package-img" style="background-image: url('images/car-4.png');"></div>
+                    <div class="package-img" style="background-image: url('images/car-3.png');"></div>
                     <div class="package-content">
-                        <h3>Individual Lessons</h3>
-                        <div class="package-price">$100</div>
+                        <h3>Premium BDE Program</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$1500</div>
+                            <div class="package-tax">+ Tax & MTO Fee</div>
+                        </div>
                         <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Flexible scheduling</li>
-                            <li><i class="fas fa-check"></i> G2 & G license preparation</li>
-                            <li><i class="fas fa-check"></i> Refresher courses</li>
-                            <li><i class="fas fa-check"></i> Highway driving practice</li>
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> 15 hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
+                            <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Use Driving school vehicle for your Road test</li>
                         </ul>
                         <a href="pricing.html" class="btn">View Details</a>
+                        <div class="package-certificate">MTO Certificate upon Course completion</div>
                     </div>
                 </div>
 
                 <!-- Package 4 -->
-                <div class="package-card premium fade-in">
-                    <div class="package-img" style="background-image: url('images/car-3.png');"></div>
+                <div class="package-card fade-in">
+                    <div class="package-img" style="background-image: url('images/car-4.png');"></div>
                     <div class="package-content">
-                        <h3>Premium BDE Program</h3>
-                        <div class="package-price">$899</div>
+                        <h3>Individual Lessons </br> G2 & G License</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$50</div>
+                            <div class="package-tax">+ Tax</div>
+                        </div>
                         <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 30 hours in-class instruction</li>
-                            <li><i class="fas fa-check"></i> 15 hours in-car training</li>
-                            <li><i class="fas fa-check"></i> Priority scheduling & instructor</li>
-                            <li><i class="fas fa-check"></i> Free vehicle for road test</li>
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> Unlimited hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
+                            <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
                         </ul>
-                        <a href="pricing.html" class="btn">Enroll Now</a>
+                        <a href="pricing.html" class="btn">View Details</a>
                     </div>
                 </div>
             </div>
