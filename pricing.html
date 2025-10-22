@@ -34,9 +34,11 @@
         
         /* Page Hero */
         .page-hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/pricing-hero.jpg');
             background-size: cover; background-position: center; height: 50vh; display: flex; align-items: center; 
             text-align: center; color: white; margin-top: 80px; 
+            /* Scroll par Work karna ka lia add kia hai  👇 */
+            background-attachment: fixed;
         }
         .page-hero-content { max-width: 800px; margin: 0 auto; animation: fadeUp 1s ease; }
         .page-hero h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.2; }
@@ -50,26 +52,123 @@
         .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--dark); }
         .section-title p { color: var(--gray); max-width: 600px; margin: 0 auto; }
-        
-        /* Pricing Cards */
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 60px; }
-        .pricing-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); position: relative; }
-        .pricing-card:hover { transform: translateY(-10px); }
-        .pricing-card.featured { border: 3px solid var(--primary); transform: scale(1.05); }
-        .pricing-card.featured:hover { transform: scale(1.05) translateY(-10px); }
-        .featured-badge { position: absolute; top: 20px; right: -30px; background: var(--secondary); color: white; padding: 8px 40px; transform: rotate(45deg); font-weight: 600; font-size: 0.8rem; box-shadow: var(--shadow); }
-        .pricing-header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; padding: 30px; text-align: center; }
-        .pricing-header h3 { font-size: 1.5rem; margin-bottom: 10px; }
-        .price-display { margin: 20px 0; }
-        .price-amount { font-size: 3.5rem; font-weight: 700; line-height: 1; }
-        .price-currency { font-size: 1.5rem; vertical-align: super; }
-        .price-note { font-size: 0.9rem; opacity: 0.9; margin-top: 5px; }
-        .pricing-features { padding: 30px; }
-        .feature-list { list-style: none; margin-bottom: 30px; }
-        .feature-list li { margin-bottom: 15px; display: flex; align-items: flex-start; }
-        .feature-list i { color: var(--success); margin-right: 10px; margin-top: 5px; flex-shrink: 0; }
-        .feature-list strong { color: var(--primary); }
-        
+
+         /* Packages Section */
+        .packages {
+            background: #f9f9f9;
+        }
+
+        .package-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .package-card {
+            background: #fff;
+            border-radius: 0 0 15px 15px;
+            /* Only round bottom corners */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: visible;
+            /* Changed from hidden to visible */
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            height: 100%;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .package-img {
+            background-size: cover;
+            /* This will fill the entire space */
+            background-position: center;
+            height: 180px;
+            border-radius: 0;
+        }
+
+        .package-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 25px;
+            text-align: center;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .package-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        /* Package Price Section */
+        .package-price-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .package-price {
+            font-size: 22px;
+            font-weight: 700;
+            /* Made bolder */
+            color: var(--primary);
+            display: block;
+            /* Makes it take full width */
+        }
+
+        .package-tax {
+            font-size: 8px;
+            color: var(--gray);
+            display: block;
+            /* Makes it take full width */
+        }
+
+        /* Package Features */
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+            flex-grow: 1;
+            min-height: 150px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .package-features li {
+            color: #555;
+            font-size: 14px;
+            margin: 8px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .package-features i {
+            color: var(--primary);
+            margin-right: 8px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Certificate text */
+        .package-certificate {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 10px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .premium {
+            border: 2px solid var(--primary);
+        }
         /* Individual Pricing */
         .individual-pricing { background: var(--light); }
         .pricing-category { margin-bottom: 40px; }
@@ -91,7 +190,7 @@
         
         /* Buttons */
         .btn { 
-            display: inline-block; padding: 12px 30px; background: var(--primary); color: white; border-radius: 5px; 
+            display: inline-block; padding: 12px 30px; background: var(--primary); color: white; border-radius: 25px; 
             text-decoration: none; font-weight: 600; transition: var(--transition); border: none; cursor: pointer; 
             box-shadow: var(--shadow); font-size: 1rem; text-align: center; margin: 5px; 
         }
@@ -204,92 +303,106 @@
         </div>
     </section>
 
-    <!-- Main Packages Section -->
-    <section class="section">
+    <!-- Packages Section -->
+    <section class="section packages">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Complete Driving Packages</h2>
-                <p>All-inclusive packages with everything you need to become a confident, licensed driver</p>
+                <h2>Our Driving Packages</h2>
+                <p>Choose the package that fits your needs and budget</p>
             </div>
-            <div class="pricing-grid">
+
+            <div class="package-cards">
                 <!-- Package 1 -->
-                <div class="pricing-card fade-in">
-                    <div class="pricing-header">
-                        <h3>Package #1</h3>
-                        <div class="price-display">
-                            <div class="price-amount"><span class="price-currency">$</span>600</div>
-                            <div class="price-note">HST & Certification Fees included</div>
+                <div class="package-card fade-in">
+                    <div class="package-img" style="background-image: url('images/car-1.png');"></div>
+                    <div class="package-content">
+                        <h3>Complete BDE Program</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$600</div>
+                            <div class="package-tax">+ Tax & MTO Fee</div>
                         </div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> 20 hours of e-learning</li>
-                            <li><i class="fas fa-check"></i> 10 hours of Practical In-Car Driving Lessons</li>
-                            <li><i class="fas fa-check"></i> <strong>Free Pick-Up & Drop-Off Provided</strong></li>
-                            <li><i class="fas fa-check"></i> 10 hours of Homelinks (homework)</li>
-                            <li><i class="fas fa-check"></i> Advanced Intersection Techniques</li>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
                             <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
-                            <li><i class="fas fa-check"></i> Road Test Preparation</li>
-                            <li><i class="fas fa-check"></i> MTO Certificate Processing</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-block">Register Now</a>
-                        <small class="item-note mt-2 d-block">*(Road Test not included)</small>
+                        <a href="contact.html" class="btn">View Details</a>
+                        <div class="package-certificate">MTO Certificate upon Course completion</div>
                     </div>
                 </div>
 
-                <!-- Package 2 (Featured) -->
-                <div class="pricing-card featured fade-in">
-                    <div class="featured-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Package #2</h3>
-                        <div class="price-display">
-                            <div class="price-amount"><span class="price-currency">$</span>820</div>
-                            <div class="price-note">HST & Certification Fees included</div>
+                <!-- Package 2 -->
+                <div class="package-card fade-in">
+                    <div class="package-img" style="background-image: url('images/car-2.png');"></div>
+                    <div class="package-content">
+                        <h3>Complete BDE Program</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$750</div>
+                            <div class="package-tax">+ Tax & MTO Fee</div>
                         </div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> 20 hours of e-learning</li>
-                            <li><i class="fas fa-check"></i> 11 hours of Practical In-Car Driving Lessons</li>
-                            <li><i class="fas fa-check"></i> <strong>Free Pick-Up & Drop-Off Provided</strong></li>
-                            <li><i class="fas fa-check"></i> 10 hours of Homelinks (homework)</li>
-                            <li><i class="fas fa-check"></i> Advanced Intersection Techniques</li>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
                             <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
-                            <li><i class="fas fa-check"></i> Road Test Preparation</li>
-                            <li><i class="fas fa-check"></i> MTO Certificate Processing</li>
-                            <li><i class="fas fa-check"></i> <strong>Use of Instructor's Car for Local Road Test</strong></li>
-                            <li><i class="fas fa-check"></i> <strong>Road Test Booking Provided by Instructor</strong></li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Use Driving school vehicle for your Road test</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-secondary btn-block">Register Now</a>
-                        <small class="item-note mt-2 d-block">*(DriveTest fee must be prepaid)</small>
+                        <a href="contact.html" class="btn">View Details</a>
+                        <div class="package-certificate">MTO Certificate upon Course completion</div>
                     </div>
                 </div>
 
                 <!-- Package 3 -->
-                <div class="pricing-card fade-in">
-                    <div class="pricing-header">
-                        <h3>Package #3</h3>
-                        <div class="price-display">
-                            <div class="price-amount"><span class="price-currency">$</span>1000</div>
-                            <div class="price-note">HST & Certification Fees included</div>
+                <div class="package-card fade-in">
+                    <div class="package-img" style="background-image: url('images/car-3.png');"></div>
+                    <div class="package-content">
+                        <h3>Premium BDE Program</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$1500</div>
+                            <div class="package-tax">+ Tax & MTO Fee</div>
                         </div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check"></i> 20 hours of e-learning</li>
-                            <li><i class="fas fa-check"></i> 15 hours of Practical In-Car Driving Lessons</li>
-                            <li><i class="fas fa-check"></i> <strong>Free Pick-Up & Drop-Off Provided</strong></li>
-                            <li><i class="fas fa-check"></i> 10 hours of Homelinks (homework)</li>
-                            <li><i class="fas fa-check"></i> Advanced Intersection Techniques</li>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> 15 hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
                             <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
-                            <li><i class="fas fa-check"></i> Road Test Preparation</li>
-                            <li><i class="fas fa-check"></i> MTO Certificate Processing</li>
-                            <li><i class="fas fa-check"></i> <strong>Use of Instructor's Car for Local Road Test</strong></li>
-                            <li><i class="fas fa-check"></i> <strong>Road Test Booking Provided by Instructor</strong></li>
-                            <li><i class="fas fa-check"></i> <strong>Individual Testing and Training for G2</strong></li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Use Driving school vehicle for your Road test</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-block">Register Now</a>
-                        <small class="item-note mt-2 d-block">*(DriveTest fee must be prepaid)</small>
+                        <a href="contact.html" class="btn">View Details</a>
+                        <div class="package-certificate">MTO Certificate upon Course completion</div>
+                    </div>
+                </div>
+
+                <!-- Package 4 -->
+                <div class="package-card fade-in">
+                    <div class="package-img" style="background-image: url('images/car-4.png');"></div>
+                    <div class="package-content">
+                        <h3>Individual Lessons </br> G2 & G License</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$50</div>
+                            <div class="package-tax">+ Tax</div>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> Unlimited hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
+                            <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
+                        </ul>
+                        <a href="contact.html" class="btn">View Details</a>
+                        <br><br>
                     </div>
                 </div>
             </div>

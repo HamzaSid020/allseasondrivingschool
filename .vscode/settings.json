@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/pricing.html"
+    "livePreview.defaultPreviewPath": "/pricing.html",
+    "liveServer.settings.port": 5501
 }

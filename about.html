@@ -131,7 +131,7 @@
 
         /* Hero Section */
         .page-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/about-hero.jpg');
             background-size: cover;
             background-position: center;
             height: 60vh;
@@ -211,7 +211,7 @@
         }
 
         .about-img img {
-            width: 100%;
+            width: 130%;
             height: auto;
             display: block;
         }
@@ -226,31 +226,42 @@
             color: var(--gray);
         }
 
+        /* Buttons */
         .btn {
-            display: inline-block;
-            padding: 12px 30px;
             background: var(--primary);
-            color: white;
-            border-radius: 5px;
+            color: #fff;
+            padding: 14px 38px;
+            border-radius: 50px;
+            font-size: 16px;
             text-decoration: none;
             font-weight: 600;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
             transition: var(--transition);
             border: none;
             cursor: pointer;
-            box-shadow: var(--shadow);
         }
 
         .btn:hover {
-            background: var(--primary-dark);
             transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+            background: var(--primary-dark);
         }
 
-        .btn-secondary {
-            background: var(--secondary);
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: all 0.6s;
         }
 
-        .btn-secondary:hover {
-            background: #ea580c;
+        .btn:hover::before {
+            left: 120%;
         }
 
         /* Values Section */
@@ -690,13 +701,11 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-img fade-in">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="About All Season Driving School">
+                    <img src="images/about.jpg" alt="About All Season Driving School">
                 </div>
                 <div class="about-text fade-in">
                     <h2>Welcome to All Season Driving School</h2>
-                    <p>Founded with a passion for road safety and driver education, All Season Driving School has been helping students become confident, responsible drivers for over a decade. Our mission is to provide comprehensive driver training that goes beyond just passing the test.</p>
-                    <p>Our certified instructors bring years of experience and a commitment to excellence. We understand that learning to drive can be both exciting and challenging, which is why we create a supportive, patient environment where every student can thrive and develop the skills they need for a lifetime of safe driving.</p>
-                    <p>At All Season Driving School, we believe that learning to drive should be a positive and empowering experience. Our comprehensive programs are designed to build confidence, develop essential driving skills, and ensure our students become safe, responsible drivers for life.</p>
+                    <p>We are a professional driving school committed to providing high-quality driver education and training. Our certified instructors have years of experience in teaching safe driving practices and helping students pass their driving tests with confidence.<br><br>At All Season Driving School, we believe that learning to drive should be a positive and empowering experience. Our comprehensive programs are designed to build confidence, develop essential driving skills, and ensure our students become safe, responsible drivers for life.</p>
                     <a href="services.html" class="btn">View Our Courses</a>
                 </div>
             </div>
