@@ -131,7 +131,7 @@
 
         /* Hero Section */
         .page-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/about-hero.jpg');
             background-size: cover;
             background-position: center;
             height: 60vh;
@@ -211,7 +211,7 @@
         }
 
         .about-img img {
-            width: 100%;
+            width: 130%;
             height: auto;
             display: block;
         }
@@ -226,115 +226,199 @@
             color: var(--gray);
         }
 
+        /* Buttons */
         .btn {
-            display: inline-block;
-            padding: 12px 30px;
             background: var(--primary);
-            color: white;
-            border-radius: 5px;
+            color: #fff;
+            padding: 14px 38px;
+            border-radius: 50px;
+            font-size: 16px;
             text-decoration: none;
             font-weight: 600;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
             transition: var(--transition);
             border: none;
             cursor: pointer;
-            box-shadow: var(--shadow);
         }
 
         .btn:hover {
-            background: var(--primary-dark);
             transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+            background: var(--primary-dark);
         }
 
-        .btn-secondary {
-            background: var(--secondary);
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: all 0.6s;
         }
 
-        .btn-secondary:hover {
-            background: #ea580c;
+        .btn:hover::before {
+            left: 120%;
         }
 
         /* Values Section */
-        .values {
-            background: var(--light);
-        }
+/* Section Styling */
+.values {
+  padding: 80px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
 
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
 
-        .value-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-        }
+.section-title p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
 
-        .value-card:hover {
-            transform: translateY(-10px);
-        }
+/* Grid Layout */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
 
-        .value-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-        }
+/* Cards */
+.value-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
 
-        .value-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
+.value-card.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hover Effect */
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.value-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
         /* Team Section */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
+/* TEAM SECTION */
+.team {
+  padding: 80px 0;
+  background: #f8f9fa;
+  text-align: center;
+}
 
-        .team-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease forwards;
+}
 
-        .team-card:hover {
-            transform: translateY(-10px);
-        }
+.section-title p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  animation: fadeInUp 1s ease 0.3s forwards;
+}
 
-        .team-img {
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-        }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
 
-        .team-content {
-            padding: 25px;
-            text-align: center;
-        }
+/* CARD */
+.team-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  opacity: 1; /* 👈 always visible now */
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
 
-        .team-content h3 {
-            margin-bottom: 5px;
-            font-size: 1.4rem;
-        }
+.team-card.animate {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
 
-        .team-content p {
-            color: var(--primary);
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
+.team-img {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.05);
+}
+
+.team-content {
+  padding: 25px 20px;
+}
+
+.team-content h3 {
+  font-size: 1.3rem;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.team-content .role {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.team-content p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .team-img {
+    height: 220px;
+  }
+}
 
         /* Testimonials */
         .testimonials {
@@ -388,35 +472,111 @@
             font-size: 0.9rem;
         }
 
-        /* Stats Section */
-        .stats {
-            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(37, 99, 235, 0.9)), url('https://images.unsplash.com/photo-1599156480040-87d5eefeb5d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-        }
+/* Stats Section */
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
+.stats {
+  position: relative;
+  padding: 100px 0;
+  background: url('images/stats-about.jpg') center/cover no-repeat;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  z-index: 1;
+}
 
-        .stat-item {
-            padding: 20px;
-        }
+/* Overlay */
+.stats .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
 
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
+.stats .container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-        .stat-text {
-            font-size: 1.1rem;
-        }
+/* ✅ Title styling only for Stats Section */
+.stats .section-title h2 {
+  font-size: 2.5rem;
+  color: #ffffff; /* White only inside stats section */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.stats .section-title p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* Stats grid and animations same as before */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px 25px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.stat-item.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.stat-number {
+  font-size: 52px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.stat-text {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .stats {
+    padding: 70px 0;
+  }
+  .stat-number {
+    font-size: 40px;
+  }
+}
+
 
         /* CTA Section */
         .cta {
@@ -439,7 +599,7 @@
         }
 
         /* Footer */
-        footer {
+           footer {
             background: var(--dark);
             color: white;
             padding: 70px 0 20px;
@@ -690,13 +850,11 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-img fade-in">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="About All Season Driving School">
+                    <img src="images/about.jpg" alt="About All Season Driving School">
                 </div>
                 <div class="about-text fade-in">
                     <h2>Welcome to All Season Driving School</h2>
-                    <p>Founded with a passion for road safety and driver education, All Season Driving School has been helping students become confident, responsible drivers for over a decade. Our mission is to provide comprehensive driver training that goes beyond just passing the test.</p>
-                    <p>Our certified instructors bring years of experience and a commitment to excellence. We understand that learning to drive can be both exciting and challenging, which is why we create a supportive, patient environment where every student can thrive and develop the skills they need for a lifetime of safe driving.</p>
-                    <p>At All Season Driving School, we believe that learning to drive should be a positive and empowering experience. Our comprehensive programs are designed to build confidence, develop essential driving skills, and ensure our students become safe, responsible drivers for life.</p>
+                    <p>We are a professional driving school committed to providing high-quality driver education and training. Our certified instructors have years of experience in teaching safe driving practices and helping students pass their driving tests with confidence.<br><br>At All Season Driving School, we believe that learning to drive should be a positive and empowering experience. Our comprehensive programs are designed to build confidence, develop essential driving skills, and ensure our students become safe, responsible drivers for life.</p>
                     <a href="services.html" class="btn">View Our Courses</a>
                 </div>
             </div>
@@ -704,108 +862,193 @@
     </section>
 
     <!-- Values Section -->
-    <section class="section values">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Our Values</h2>
-                <p>The principles that guide everything we do at All Season Driving School</p>
-            </div>
-            <div class="values-grid">
-                <div class="value-card fade-in">
-                    <div class="value-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Safety First</h3>
-                    <p>We prioritize safety in all our training programs, ensuring our students become confident and responsible drivers.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Quality Education</h3>
-                    <p>Our certified instructors provide comprehensive training that goes beyond just passing the driving test.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Student Focused</h3>
-                    <p>We tailor our approach to each student's unique learning style and pace for optimal results.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Integrity</h3>
-                    <p>We maintain the highest standards of professionalism and ethical conduct in all our interactions.</p>
-                </div>
-            </div>
+    <section class="section values" id="values">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Our Values</h2>
+      <p>The principles that guide everything we do at All Season Driving School</p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card animate">
+        <div class="value-icon">
+          <i class="fas fa-shield-alt"></i>
         </div>
-    </section>
+        <h3>Safety First</h3>
+        <p>We prioritize safety in all our training programs, ensuring our students become confident and responsible drivers.</p>
+      </div>
+
+      <div class="value-card animate">
+        <div class="value-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Quality Education</h3>
+        <p>Our certified instructors provide comprehensive training that goes beyond just passing the driving test.</p>
+      </div>
+
+      <div class="value-card animate">
+        <div class="value-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Student Focused</h3>
+        <p>We tailor our approach to each student's unique learning style and pace for optimal results.</p>
+      </div>
+
+      <div class="value-card animate">
+        <div class="value-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Integrity</h3>
+        <p>We maintain the highest standards of professionalism and ethical conduct in all our interactions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Intersection Observer for scroll animation
+  const cards = document.querySelectorAll('.value-card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+
 
     <!-- Team Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Meet Our Team</h2>
-                <p>Our certified instructors are dedicated to your driving success</p>
-            </div>
-            <div class="team-grid">
-                <div class="team-card fade-in">
-                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');"></div>
-                    <div class="team-content">
-                        <h3>Tahir Mirza</h3>
-                        <p>Head Instructor</p>
-                        <p>With over 10 years of experience, Tahir specializes in G2 and G test preparation with an exceptional success rate.</p>
-                    </div>
-                </div>
-                <div class="team-card fade-in">
-                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80');"></div>
-                    <div class="team-content">
-                        <h3>Sarah Johnson</h3>
-                        <p>Senior Instructor</p>
-                        <p>Sarah has helped hundreds of beginners gain confidence behind the wheel with her patient and encouraging approach.</p>
-                    </div>
-                </div>
-                <div class="team-card fade-in">
-                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
-                    <div class="team-content">
-                        <h3>Michael Chen</h3>
-                        <p>BDE Specialist</p>
-                        <p>Michael specializes in the Beginner Driver Education program, helping new drivers build a solid foundation.</p>
-                    </div>
-                </div>
-            </div>
+<section class="section team" id="team">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Meet Our Team</h2>
+      <p>Our certified instructors are dedicated to your driving success</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1974&q=80');"></div>
+        <div class="team-content">
+          <h3>Tahir Mirza</h3>
+          <p class="role">Head Instructor</p>
+          <p>With over 10 years of experience, Tahir specializes in G2 and G test preparation with an exceptional success rate.</p>
         </div>
-    </section>
+      </div>
+
+      <div class="team-card">
+        <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=2080&q=80');"></div>
+        <div class="team-content">
+          <h3>Sarah Johnson</h3>
+          <p class="role">Senior Instructor</p>
+          <p>Sarah has helped hundreds of beginners gain confidence behind the wheel with her patient and encouraging approach.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=2070&q=80');"></div>
+        <div class="team-content">
+          <h3>Michael Chen</h3>
+          <p class="role">BDE Specialist</p>
+          <p>Michael specializes in the Beginner Driver Education program, helping new drivers build a solid foundation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const teamCards = document.querySelectorAll(".team-card");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  teamCards.forEach(card => observer.observe(card));
+});
+</script>
+
+
+
+
 
     <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Our Success in Numbers</h2>
-                <p>The results speak for themselves</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-item fade-in">
-                    <div class="stat-number">150+</div>
-                    <div class="stat-text">New Drivers Trained</div>
-                </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number">99%</div>
-                    <div class="stat-text">Success Rate</div>
-                </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number">4.9★</div>
-                    <div class="stat-text">Student Rating</div>
-                </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-text">Years of Experience</div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Stats Section -->
+<section class="stats" id="stats">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="section-title fade-in-up">
+      <h2>Our Success in Numbers</h2>
+      <p>The results speak for themselves</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-item fade-in-up">
+        <div class="stat-number" data-target="150">0</div>
+        <div class="stat-text">New Drivers Trained</div>
+      </div>
+      <div class="stat-item fade-in-up">
+        <div class="stat-number" data-target="99">0</div>
+        <div class="stat-text">Success Rate (%)</div>
+      </div>
+      <div class="stat-item fade-in-up">
+        <div class="stat-number" data-target="4.9">0</div>
+        <div class="stat-text">Student Rating ★</div>
+      </div>
+      <div class="stat-item fade-in-up">
+        <div class="stat-number" data-target="10">0</div>
+        <div class="stat-text">Years of Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".stat-number");
+  const fadeEls = document.querySelectorAll(".fade-in-up, .stat-item");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+
+        if (entry.target.classList.contains("stat-number")) {
+          const target = +entry.target.dataset.target;
+          let count = 0;
+          const speed = 20;
+          const update = () => {
+            const inc = target / 100;
+            count += inc;
+            if (count < target) {
+              entry.target.textContent = Math.floor(count);
+              requestAnimationFrame(update);
+            } else {
+              entry.target.textContent = target % 1 !== 0 ? target.toFixed(1) : target;
+            }
+          };
+          update();
+        }
+      }
+    });
+  }, { threshold: 0.4 });
+
+  fadeEls.forEach(el => observer.observe(el));
+  counters.forEach(counter => observer.observe(counter));
+});
+</script>
 
     <!-- Testimonials Section -->
     <section class="section testimonials">
@@ -879,7 +1122,8 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>All Season Driving School</h3>
-                    <p>Professional driving instruction from certified instructors. Get your driver's license with our comprehensive training programs.</p>
+                    <p>Professional driving instruction from certified instructors. Get your driver's license with our
+                        comprehensive training programs.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -908,13 +1152,16 @@
                     <h3>Contact Info</h3>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 5428 Tenth Line W, Mississauga, ON L5M 0N1</li>
-                        <li><i class="fas fa-phone"></i> (905) 226-0077</li>
-                        <li><i class="fas fa-envelope"></i> allseasondrivingschool@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (905) 226-0077<p style="padding-left: 20px;">(647) 778-4573</p></li>
+                        <li><i class="fas fa-envelope"></i> allseasonds@gmail.com</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; <script>document.write(new Date().getFullYear());</script> All Season Driving School. All rights reserved.</p>
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear());</script> All Season Driving School. All rights
+                    reserved.
+                </p>
             </div>
         </div>
     </footer>

@@ -131,7 +131,7 @@
 
         /* Page Hero */
         .page-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/services-hero.jpg');
             background-size: cover;
             background-position: center;
             height: 50vh;
@@ -176,207 +176,340 @@
         }
 
         /* Services Section */
-        .section {
-            padding: 80px 0;
-        }
+      .services {
+  padding: 100px 0;
+  background: #f8fafc;
+  font-family: "Poppins", sans-serif;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+.services .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
 
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
+.service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 25px;
+  transition: all 0.4s ease;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+}
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
+.service-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            height: 100%;
-        }
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+}
 
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
+.service-icon {
+  font-size: 40px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
 
-        .service-icon {
-            height: 200px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-        }
+.service-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
 
-        .service-content {
-            padding: 30px;
-        }
+.service-content p {
+  font-size: 15px;
+  color: #475569;
+  margin-bottom: 15px;
+}
 
-        .service-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+  text-align: left;
+}
 
-        .service-content p {
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
+.service-features li {
+  font-size: 14px;
+  color: #334155;
+  margin-bottom: 8px;
+}
 
-        .service-features {
-            list-style: none;
-            margin-bottom: 25px;
-        }
+.service-features i {
+  color: #2563eb;
+  margin-right: 8px;
+}
 
-        .service-features li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: flex-start;
-        }
+.btn {
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
 
-        .service-features i {
-            color: var(--primary);
-            margin-right: 10px;
-            margin-top: 5px;
-            flex-shrink: 0;
-        }
+.btn:hover {
+  background: #1e40af;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--primary);
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            font-size: 1rem;
-        }
+/* Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-        .btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-        }
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 0;
+  }
+}
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
 
-        .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-        }
+ /* Features Section */
 
-        /* Features Section */
-        .features {
-            background: var(--light);
-        }
+#features-section.features {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+  font-family: "Poppins", sans-serif;
+  color: inherit; /* won't force global text color */
+}
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
+/* Scope title only inside this section */
+#features-section .scoped-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+#features-section .scoped-title h2 {
+  font-size: 2.5rem;
+  color: #0f172a; /* only this section's H2 */
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+#features-section .scoped-title h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+#features-section .scoped-title p {
+  color: #475569; /* only this section's paragraph */
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-        }
+/* Grid & cards (scoped) */
+#features-section .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  justify-content: center;
+  align-items: stretch;
+}
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
+#features-section .feature-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  color: #111827; /* normal text inside card */
+}
 
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-        }
+/* Hover overlay uses brand blue only on hover */
+#features-section .feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 99, 235, 0.15); /* #2563eb tint */
+  transition: left 0.45s ease;
+  pointer-events: none;
+}
+#features-section .feature-card:hover::before {
+  left: 0;
+}
 
-        .feature-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
+/* Icon + text inside card */
+#features-section .feature-icon {
+  font-size: 2.8rem;
+  color: #2563eb;
+  margin-bottom: 20px;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
 
-        .feature-card p {
-            color: var(--gray);
-        }
+/* Hover: make card blue and inner text white */
+#features-section .feature-card:hover {
+  background-color: #2563eb; /* full brand blue on hover */
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+#features-section .feature-card:hover .feature-icon,
+#features-section .feature-card:hover h3,
+#features-section .feature-card:hover p {
+  color: #ffffff !important; /* only affecting inner elements of this card */
+}
 
-        /* Service Areas Section */
-        .areas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+/* Title & paragraph inside card */
+#features-section .feature-card h3 {
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+#features-section .feature-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
-        .area-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
+/* Fade-in animation (scoped) */
+#features-section .fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+#features-section .fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-        .area-card h3 {
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-            color: var(--primary);
-        }
+/* responsive tweaks */
+@media (max-width: 768px) {
+  #features-section.features {
+    padding: 60px 0;
+  }
+  #features-section .feature-card {
+    padding: 28px 18px;
+  }
+}
 
-        .area-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
+/* services areas section */
+.service-areas {
+  padding: 80px 0;
+  background: #f8fafc;
+  color: #333;
+}
 
-        .area-list li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
+.service-areas .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-        .area-list i {
-            color: var(--primary);
-            margin-right: 10px;
-        }
+.service-areas .section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.service-areas .section-title p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.area-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.area-card h3 {
+  font-size: 1.4rem;
+  color: #0f172a;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.area-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.area-list li {
+  font-size: 1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.area-list li i {
+  color: #2563eb;
+}
+
+.area-list.detailed li {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.area-list.detailed p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 4px 0 0 28px;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
         /* CTA Section */
         .cta {
-            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(37, 99, 235, 0.9)), url('https://images.unsplash.com/photo-1599156480040-87d5eefeb5d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(0, 81, 255, 0.2), rgba(37, 99, 235, 0.2)), url('images/services-cta.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -387,35 +520,38 @@
         .cta h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            color:white;
         }
 
         .cta p {
             max-width: 600px;
             margin: 0 auto 30px;
             font-size: 1.1rem;
-            color: #e2e8f0;
+            color: white;
         }
 
         .btn-secondary {
-            background: var(--secondary);
+            background: #2563eb ;
         }
 
         .btn-secondary:hover {
-            background: #ea580c;
+            background: white;
+            color:black;
         }
 
         .btn-light {
             background: white;
-            color: var(--primary);
+            color:#2563eb
+
         }
 
         .btn-light:hover {
-            background: #f8fafc;
-            color: var(--primary-dark);
+            background: black;
+            color:white;
         }
 
         /* Footer */
-        footer {
+         footer {
             background: var(--dark);
             color: white;
             padding: 70px 0 20px;
@@ -674,188 +810,252 @@
     </section>
 
     <!-- Services Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Comprehensive Driving Services</h2>
-                <p>Choose from our range of professional driving instruction programs designed for every skill level</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Beginner Driver Education</h3>
-                        <p>Complete G1 to G2 license program including 20 hours of classroom theory, 10 hours of in-car training, and MTO certification.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Traffic rules & regulations</li>
-                            <li><i class="fas fa-check"></i> Vehicle control basics</li>
-                            <li><i class="fas fa-check"></i> Road safety fundamentals</li>
-                            <li><i class="fas fa-check"></i> MTO certification included</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Get Started</a>
-                    </div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-road"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>G2 Road Test Preparation</h3>
-                        <p>Specialized training to prepare for your G2 road test with practice on test routes and common test scenarios.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Test route familiarization</li>
-                            <li><i class="fas fa-check"></i> Parallel parking practice</li>
-                            <li><i class="fas fa-check"></i> Emergency stop procedures</li>
-                            <li><i class="fas fa-check"></i> Mock test simulations</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Prepare Now</a>
-                    </div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-highway"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>G License Training</h3>
-                        <p>Advanced driving instruction for G license including highway driving, complex intersections, and defensive techniques.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Highway driving skills</li>
-                            <li><i class="fas fa-check"></i> Advanced intersection techniques</li>
-                            <li><i class="fas fa-check"></i> Defensive driving strategies</li>
-                            <li><i class="fas fa-check"></i> Night driving practice</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Upgrade License</a>
-                    </div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-user-clock"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Individual Lessons</h3>
-                        <p>Customized one-on-one instruction tailored to your specific needs and learning pace.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Personalized instruction</li>
-                            <li><i class="fas fa-check"></i> Flexible scheduling</li>
-                            <li><i class="fas fa-check"></i> Focus on weak areas</li>
-                            <li><i class="fas fa-check"></i> Progress tracking</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Book Lesson</a>
-                    </div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-car-side"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Road Test Services</h3>
-                        <p>Complete road test support including vehicle provision, test booking, and pre-test warm-up lessons.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Instructor's car for test</li>
-                            <li><i class="fas fa-check"></i> Test booking assistance</li>
-                            <li><i class="fas fa-check"></i> Pre-test practice session</li>
-                            <li><i class="fas fa-check"></i> Pickup & dropoff service</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Schedule Test</a>
-                    </div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Refresher Courses</h3>
-                        <p>For experienced drivers who want to improve skills, regain confidence, or learn new techniques.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Skill assessment</li>
-                            <li><i class="fas fa-check"></i> Confidence building</li>
-                            <li><i class="fas fa-check"></i> Modern driving techniques</li>
-                            <li><i class="fas fa-check"></i> Highway refresher</li>
-                        </ul>
-                        <a href="contact.html" class="btn">Refresh Skills</a>
-                    </div>
-                </div>
-            </div>
+   <section class="section services">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Comprehensive Driving Services</h2>
+      <p>Choose from our range of professional driving instruction programs designed for every skill level</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service Card -->
+      <div class="service-card fade-in-up">
+        <div class="service-icon"><i class="fas fa-user-graduate"></i></div>
+        <div class="service-content">
+          <h3>Beginner Driver Education</h3>
+          <p>Complete G1 to G2 license program including 20 hours of classroom theory, 10 hours of in-car training, and MTO certification.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Traffic rules & regulations</li>
+            <li><i class="fas fa-check"></i> Vehicle control basics</li>
+            <li><i class="fas fa-check"></i> Road safety fundamentals</li>
+            <li><i class="fas fa-check"></i> MTO certification included</li>
+          </ul>
         </div>
-    </section>
+        <a href="contact.html" class="btn">Get Started</a>
+      </div>
+
+      <div class="service-card fade-in-up">
+        <div class="service-icon"><i class="fas fa-road"></i></div>
+        <div class="service-content">
+          <h3>G2 Road Test Preparation</h3>
+          <p>Specialized training to prepare for your G2 road test with practice on test routes and common test scenarios.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Test route familiarization</li>
+            <li><i class="fas fa-check"></i> Parallel parking practice</li>
+            <li><i class="fas fa-check"></i> Emergency stop procedures</li>
+            <li><i class="fas fa-check"></i> Mock test simulations</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn">Prepare Now</a>
+      </div>
+
+      <div class="service-card fade-in-up">
+        <div class="service-icon"><i class="fas fa-highway"></i></div>
+        <div class="service-content">
+          <h3>G License Training</h3>
+          <p>Advanced driving instruction for G license including highway driving, complex intersections, and defensive techniques.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Highway driving skills</li>
+            <li><i class="fas fa-check"></i> Advanced intersection techniques</li>
+            <li><i class="fas fa-check"></i> Defensive driving strategies</li>
+            <li><i class="fas fa-check"></i> Night driving practice</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn">Upgrade License</a>
+      </div>
+
+      <div class="service-card fade-in-up">
+        <div class="service-icon"><i class="fas fa-user-clock"></i></div>
+        <div class="service-content">
+          <h3>Individual Lessons</h3>
+          <p>Customized one-on-one instruction tailored to your specific needs and learning pace.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Personalized instruction</li>
+            <li><i class="fas fa-check"></i> Flexible scheduling</li>
+            <li><i class="fas fa-check"></i> Focus on weak areas</li>
+            <li><i class="fas fa-check"></i> Progress tracking</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn">Book Lesson</a>
+      </div>
+
+      <div class="service-card fade-in-up">
+        <div class="service-icon"><i class="fas fa-car-side"></i></div>
+        <div class="service-content">
+          <h3>Road Test Services</h3>
+          <p>Complete road test support including vehicle provision, test booking, and pre-test warm-up lessons.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Instructor's car for test</li>
+            <li><i class="fas fa-check"></i> Test booking assistance</li>
+            <li><i class="fas fa-check"></i> Pre-test practice session</li>
+            <li><i class="fas fa-check"></i> Pickup & dropoff service</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn">Schedule Test</a>
+      </div>
+
+      <div class="service-card fade-in-up">
+        <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+        <div class="service-content">
+          <h3>Refresher Courses</h3>
+          <p>For experienced drivers who want to improve skills, regain confidence, or learn new techniques.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Skill assessment</li>
+            <li><i class="fas fa-check"></i> Confidence building</li>
+            <li><i class="fas fa-check"></i> Modern driving techniques</li>
+            <li><i class="fas fa-check"></i> Highway refresher</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn">Refresh Skills</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".fade-in-up");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
+});
+
+</script>
+
 
     <!-- Features Section -->
-    <section class="section features">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Why Choose Our Services?</h2>
-                <p>We provide exceptional driving instruction with benefits that set us apart</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3>Free Pick-up & Drop-off</h3>
-                    <p>Convenient service within our coverage area - we come to you!</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Flexible Scheduling</h3>
-                    <p>Morning, afternoon, evening, and weekend lessons available</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Certified Instructors</h3>
-                    <p>MTO certified instructors with years of teaching experience</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>High Success Rate</h3>
-                    <p>98% pass rate with most students passing on their first attempt</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Features section (scoped) -->
+<section id="features-section" class="section features">
+  <div class="container">
+    <div class="section-title scoped-title">
+      <h2>Why Choose Our Services?</h2>
+      <p>We provide exceptional driving instruction with benefits that set us apart</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-car"></i></div>
+        <h3>Free Pick-up &amp; Drop-off</h3>
+        <p>Convenient service within our coverage area - we come to you!</p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-clock"></i></div>
+        <h3>Flexible Scheduling</h3>
+        <p>Morning, afternoon, evening, and weekend lessons available</p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-users"></i></div>
+        <h3>Certified Instructors</h3>
+        <p>MTO certified instructors with years of teaching experience</p>
+      </div>
+
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><i class="fas fa-star"></i></div>
+        <h3>High Success Rate</h3>
+        <p>98% pass rate with most students passing on their first attempt</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.getElementById('features-section');
+  if (!section) return;
+
+  const fadeEls = section.querySelectorAll('.fade-in');
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeEls.forEach(el => io.observe(el));
+});
+</script>
 
     <!-- Service Areas Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>We Serve the Greater Toronto Area</h2>
-                <p>Comprehensive coverage across multiple cities and test centers</p>
-            </div>
-            <div class="areas-grid">
-                <div class="area-card fade-in">
-                    <h3>Primary Service Areas</h3>
-                    <ul class="area-list">
-                        <li><i class="fas fa-map-marker-alt"></i> Mississauga</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Brampton</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Oakville</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Etobicoke</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Toronto</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Vaughan</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Markham</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Richmond Hill</li>
-                    </ul>
-                </div>
-                <div class="area-card fade-in">
-                    <h3>Test Centers We Cover</h3>
-                    <ul class="area-list">
-                        <li><i class="fas fa-car"></i> Mississauga DriveTest</li>
-                        <li><i class="fas fa-car"></i> Brampton DriveTest</li>
-                        <li><i class="fas fa-car"></i> Oakville DriveTest</li>
-                        <li><i class="fas fa-car"></i> Etobicoke DriveTest</li>
-                        <li><i class="fas fa-car"></i> Downsview DriveTest</li>
-                        <li><i class="fas fa-car"></i> Port Union DriveTest</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section service-areas">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>We Serve the Greater Toronto Area</h2>
+      <p>Comprehensive coverage across multiple cities and DriveTest centers</p>
+    </div>
+
+    <div class="areas-grid">
+      <!-- Primary Service Areas -->
+      <div class="area-card fade-in">
+        <h3><i class="fas fa-map"></i> Primary Service Areas</h3>
+        <ul class="area-list">
+          <li><i class="fas fa-map-marker-alt"></i> Mississauga</li>
+          <li><i class="fas fa-map-marker-alt"></i> Brampton</li>
+          <li><i class="fas fa-map-marker-alt"></i> Oakville</li>
+          <li><i class="fas fa-map-marker-alt"></i> Etobicoke</li>
+          <li><i class="fas fa-map-marker-alt"></i> Toronto</li>
+          <li><i class="fas fa-map-marker-alt"></i> Vaughan</li>
+          <li><i class="fas fa-map-marker-alt"></i> Markham</li>
+          <li><i class="fas fa-map-marker-alt"></i> Richmond Hill</li>
+        </ul>
+      </div>
+
+      <!-- Test Centers We Cover -->
+      <div class="area-card fade-in">
+        <h3><i class="fas fa-car"></i> Test Centers We Cover</h3>
+        <ul class="area-list detailed">
+          <li>
+            <span><i class="fas fa-car"></i> Mississauga DriveTest</span>
+            <p>Cooksville • Erin Mills • Meadowvale</p>
+          </li>
+          <li>
+            <span><i class="fas fa-car"></i> Brampton DriveTest</span>
+            <p>Downtown • Springdale • Mount Pleasant</p>
+          </li>
+          <li>
+            <span><i class="fas fa-car"></i> Oakville DriveTest</span>
+            <p>Glen Abbey • Palermo • Clearview</p>
+          </li>
+          <li>
+            <span><i class="fas fa-car"></i> Etobicoke DriveTest</span>
+            <p>Kingsway • Rexdale • Mimico</p>
+          </li>
+          <li>
+            <span><i class="fas fa-car"></i> Downsview DriveTest</span>
+            <p>York University • Jane & Finch • Sheppard West</p>
+          </li>
+          <li>
+            <span><i class="fas fa-car"></i> Port Union DriveTest</span>
+            <p>Rouge Hill • West Hill • Highland Creek</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = document.querySelectorAll("#areas-section .fade-in-up");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  targets.forEach(el => observer.observe(el));
+});
+</script>
+
 
     <!-- CTA Section -->
     <section class="cta">
@@ -875,7 +1075,8 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>All Season Driving School</h3>
-                    <p>Professional driving instruction from certified instructors. Get your driver's license with our comprehensive training programs.</p>
+                    <p>Professional driving instruction from certified instructors. Get your driver's license with our
+                        comprehensive training programs.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -904,13 +1105,16 @@
                     <h3>Contact Info</h3>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 5428 Tenth Line W, Mississauga, ON L5M 0N1</li>
-                        <li><i class="fas fa-phone"></i> (905) 226-0077</li>
-                        <li><i class="fas fa-envelope"></i> allseasondrivingschool@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (905) 226-0077<p style="padding-left: 20px;">(647) 778-4573</p></li>
+                        <li><i class="fas fa-envelope"></i> allseasonds@gmail.com</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; <script>document.write(new Date().getFullYear());</script> All Season Driving School. All rights reserved.</p>
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear());</script> All Season Driving School. All rights
+                    reserved.
+                </p>
             </div>
         </div>
     </footer>

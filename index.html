@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Season Driving School</title>
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #2563eb;
@@ -134,7 +136,7 @@
         /* Hero Section */
         .hero {
             position: relative;
-            background: url('images/car-purchase.jpg') center/cover no-repeat;
+            background: url('images/hero 1.jpg') center/cover no-repeat;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -156,8 +158,13 @@
         }
 
         @keyframes gradientShift {
-            from { background-position: left; }
-            to { background-position: right; }
+            from {
+                background-position: left;
+            }
+
+            to {
+                background-position: right;
+            }
         }
 
         .hero .container {
@@ -310,9 +317,11 @@
 
         .package-card {
             background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            overflow: hidden;
+            border-radius: 0 0 15px 15px;
+            /* Only round bottom corners */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: visible;
+            /* Changed from hidden to visible */
             display: flex;
             flex-direction: column;
             transition: var(--transition);
@@ -322,13 +331,15 @@
 
         .package-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .package-img {
             background-size: cover;
+            /* This will fill the entire space */
             background-position: center;
             height: 180px;
+            border-radius: 0;
         }
 
         .package-content {
@@ -338,6 +349,7 @@
             justify-content: space-between;
             padding: 25px;
             text-align: center;
+            border-radius: 0 0 15px 15px;
         }
 
         .package-content h3 {
@@ -346,19 +358,39 @@
             color: #222;
         }
 
-        .package-price {
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--primary);
+        /* Package Price Section */
+        .package-price-container {
+            text-align: center;
             margin-bottom: 15px;
         }
 
+        .package-price {
+            font-size: 22px;
+            font-weight: 700;
+            /* Made bolder */
+            color: var(--primary);
+            display: block;
+            /* Makes it take full width */
+        }
+
+        .package-tax {
+            font-size: 8px;
+            color: var(--gray);
+            display: block;
+            /* Makes it take full width */
+        }
+
+        /* Package Features */
         .package-features {
             list-style: none;
             padding: 0;
             margin-bottom: 25px;
             flex-grow: 1;
             min-height: 150px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
         }
 
         .package-features li {
@@ -366,13 +398,23 @@
             font-size: 14px;
             margin: 8px 0;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
         }
 
         .package-features i {
             color: var(--primary);
             margin-right: 8px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Certificate text */
+        .package-certificate {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 10px;
+            font-style: italic;
+            text-align: center;
         }
 
         .premium {
@@ -507,14 +549,16 @@
             align-items: flex-start;
         }
 
-        .contact-info, .contact-form {
+        .contact-info,
+        .contact-form {
             background: #fff;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
         }
 
-        .contact-info h3, .contact-form h3 {
+        .contact-info h3,
+        .contact-form h3 {
             margin-bottom: 20px;
             font-size: 1.8rem;
             color: #1e293b;
@@ -573,11 +617,13 @@
         /* CTA Section */
         .cta {
             position: relative;
-            background: url("images/oldimage_6.jpg") center/cover no-repeat;
+            background: url("images/cta-image.jpg") center/cover no-repeat;
             color: #fff;
             text-align: center;
             padding: 120px 20px;
             overflow: hidden;
+            /* Scroll par Work karna ka lia add kia hai  👇 */
+            background-attachment: fixed;
         }
 
         .cta-overlay {
@@ -586,7 +632,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0.7) 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.7) 100%);
             z-index: 1;
         }
 
@@ -754,7 +800,8 @@
             transform: translateY(0);
         }
 
-        .reveal-left, .reveal-right {
+        .reveal-left,
+        .reveal-right {
             opacity: 0;
             transform: translateY(40px);
             transition: all 1.2s ease;
@@ -772,7 +819,8 @@
             animation: slideInRight 1.2s ease forwards;
         }
 
-        .contact-info, .contact-form {
+        .contact-info,
+        .contact-form {
             transform: translateX(-60px);
             opacity: 0;
             transition: all 1s ease;
@@ -782,19 +830,34 @@
             transform: translateX(60px);
         }
 
-        .contact-info.show, .contact-form.show {
+        .contact-info.show,
+        .contact-form.show {
             opacity: 1;
             transform: translateX(0);
         }
 
         @keyframes slideInLeft {
-            0% { opacity: 0; transform: translateX(-80px); }
-            100% { opacity: 1; transform: translateX(0); }
+            0% {
+                opacity: 0;
+                transform: translateX(-80px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         @keyframes slideInRight {
-            0% { opacity: 0; transform: translateX(80px); }
-            100% { opacity: 1; transform: translateX(0); }
+            0% {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         /* Responsive */
@@ -874,6 +937,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -961,8 +1025,12 @@
                 </div>
                 <div class="about-content reveal-right">
                     <h2>Welcome to All Season Driving School</h2>
-                    <p>We are a professional driving school committed to providing high-quality driver education and training. Our certified instructors have years of experience in teaching safe driving practices and helping students pass their driving tests with confidence.</p>
-                    <p>At All Season Driving School, we believe that learning to drive should be a positive and empowering experience. Our comprehensive programs are designed to build confidence, develop essential driving skills, and ensure our students become safe, responsible drivers for life.</p>
+                    <p>We are a professional driving school committed to providing high-quality driver education and
+                        training. Our certified instructors have years of experience in teaching safe driving practices
+                        and helping students pass their driving tests with confidence.</p>
+                    <p>At All Season Driving School, we believe that learning to drive should be a positive and
+                        empowering experience. Our comprehensive programs are designed to build confidence, develop
+                        essential driving skills, and ensure our students become safe, responsible drivers for life.</p>
                     <a href="about.html" class="btn">Learn More About Us</a>
                 </div>
             </div>
@@ -980,65 +1048,95 @@
             <div class="package-cards">
                 <!-- Package 1 -->
                 <div class="package-card fade-in">
-                    <div class="package-img" style="background-image: url('images/car-1.jpg');"></div>
+                    <div class="package-img" style="background-image: url('images/car-1.png');"></div>
                     <div class="package-content">
                         <h3>Complete BDE Program</h3>
-                        <div class="package-price">$749</div>
+                        <div class="package-price-container">
+                            <div class="package-price">$600</div>
+                            <div class="package-tax">+ Tax & MTO Fee</div>
+                        </div>
                         <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 20 hours in-class instruction</li>
-                            <li><i class="fas fa-check"></i> 10 hours in-car training</li>
-                            <li><i class="fas fa-check"></i> MTO-approved curriculum</li>
-                            <li><i class="fas fa-check"></i> Insurance discount certificate</li>
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
+                            <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
                         </ul>
                         <a href="pricing.html" class="btn">View Details</a>
+                        <div class="package-certificate">MTO Certificate upon Course completion</div>
                     </div>
                 </div>
 
                 <!-- Package 2 -->
                 <div class="package-card fade-in">
-                    <div class="package-img" style="background-image: url('images/car-2.jpg');"></div>
+                    <div class="package-img" style="background-image: url('images/car-2.png');"></div>
                     <div class="package-content">
-                        <h3>BDE + Road Test</h3>
-                        <div class="package-price">$749</div>
+                        <h3>Complete BDE Program</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$750</div>
+                            <div class="package-tax">+ Tax & MTO Fee</div>
+                        </div>
                         <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Complete BDE Program</li>
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of In-car training</li>
                             <li><i class="fas fa-check"></i> Road test preparation</li>
-                            <li><i class="fas fa-check"></i> Use of our vehicle for road test</li>
-                            <li><i class="fas fa-check"></i> Pickup and dropoff for test</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
+                            <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Use Driving school vehicle for your Road test</li>
                         </ul>
                         <a href="pricing.html" class="btn">View Details</a>
+                        <div class="package-certificate">MTO Certificate upon Course completion</div>
                     </div>
                 </div>
 
                 <!-- Package 3 -->
                 <div class="package-card fade-in">
-                    <div class="package-img" style="background-image: url('images/car-4.jpg');"></div>
+                    <div class="package-img" style="background-image: url('images/car-3.png');"></div>
                     <div class="package-content">
-                        <h3>Individual Lessons</h3>
-                        <div class="package-price">$100</div>
+                        <h3>Premium BDE Program</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$1500</div>
+                            <div class="package-tax">+ Tax & MTO Fee</div>
+                        </div>
                         <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Flexible scheduling</li>
-                            <li><i class="fas fa-check"></i> G2 & G license preparation</li>
-                            <li><i class="fas fa-check"></i> Refresher courses</li>
-                            <li><i class="fas fa-check"></i> Highway driving practice</li>
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> 15 hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
+                            <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Use Driving school vehicle for your Road test</li>
                         </ul>
                         <a href="pricing.html" class="btn">View Details</a>
+                        <div class="package-certificate">MTO Certificate upon Course completion</div>
                     </div>
                 </div>
 
                 <!-- Package 4 -->
-                <div class="package-card premium fade-in">
-                    <div class="package-img" style="background-image: url('images/car-3.jpg');"></div>
+                <div class="package-card fade-in">
+                    <div class="package-img" style="background-image: url('images/car-4.png');"></div>
                     <div class="package-content">
-                        <h3>Premium BDE Program</h3>
-                        <div class="package-price">$899</div>
+                        <h3>Individual Lessons </br> G2 & G License</h3>
+                        <div class="package-price-container">
+                            <div class="package-price">$50</div>
+                            <div class="package-tax">+ Tax</div>
+                        </div>
                         <ul class="package-features">
-                            <li><i class="fas fa-check"></i> 30 hours in-class instruction</li>
-                            <li><i class="fas fa-check"></i> 15 hours in-car training</li>
-                            <li><i class="fas fa-check"></i> Priority scheduling & instructor</li>
-                            <li><i class="fas fa-check"></i> Free vehicle for road test</li>
+                            <li><i class="fas fa-check"></i> 20 hrs of Online training</li>
+                            <li><i class="fas fa-check"></i> Unlimited hrs of In-car training</li>
+                            <li><i class="fas fa-check"></i> Road test preparation</li>
+                            <li><i class="fas fa-check"></i> 10 hrs of Homelinks</li>
+                            <li><i class="fas fa-check"></i> Free Pick-Up & Drop-Off</li>
+                            <li><i class="fas fa-check"></i> Defensive Driving Techniques</li>
+                            <li><i class="fas fa-check"></i> Advanced Driving Techniques</li>
                         </ul>
-                        <a href="pricing.html" class="btn">Enroll Now</a>
+                        <a href="pricing.html" class="btn">View Details</a>
+                        <br><br>
                     </div>
                 </div>
             </div>
@@ -1057,7 +1155,8 @@
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card fade-in">
                     <div class="testimonial-text">
-                        "Best instructor in town, prices are affordable and I cleared my G2 in first try. Would recommend him for sure."
+                        "Best instructor in town, prices are affordable and I cleared my G2 in first try. Would
+                        recommend him for sure."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
@@ -1073,7 +1172,8 @@
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card fade-in">
                     <div class="testimonial-text">
-                        "Hammad is an excellent instructor. Very patient, clear with instructions and encouraging. I felt very confident and passed my G test on the first try. Highly recommend him for lessons!"
+                        "Hammad is an excellent instructor. Very patient, clear with instructions and encouraging. I
+                        felt very confident and passed my G test on the first try. Highly recommend him for lessons!"
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
@@ -1089,7 +1189,8 @@
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card fade-in">
                     <div class="testimonial-text">
-                        "Hammad is an excellent instructor. Very clear instructions with great feedback. Passed G2 on first try. Highly recommend him for driving lessons."
+                        "Hammad is an excellent instructor. Very clear instructions with great feedback. Passed G2 on
+                        first try. Highly recommend him for driving lessons."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
@@ -1117,7 +1218,8 @@
                 <!-- Contact Info -->
                 <div class="contact-info">
                     <h3>Get In Touch</h3>
-                    <p>Have questions about our driving programs? We're here to help you get started on your driving journey.</p>
+                    <p>Have questions about our driving programs? We're here to help you get started on your driving
+                        journey.</p>
 
                     <ul class="contact-details">
                         <li>
@@ -1131,14 +1233,16 @@
                             <i class="fas fa-phone"></i>
                             <div>
                                 <strong>Phone</strong><br>
-                                (905) 226-0077
+                                (905) 226-0077<br>
+                                (647) 778-4573
+
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <strong>Email</strong><br>
-                                allseasondrivingschool@gmail.com
+                                allseasonds@gmail.com
                             </div>
                         </li>
                         <li>
@@ -1154,7 +1258,7 @@
                 <!-- Contact Form -->
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form>
+                    <form id="contactForm" action="https://formsubmit.co/allseasonds@gmail.com" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" class="form-control" placeholder="Enter your name">
@@ -1169,7 +1273,8 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" placeholder="Tell us about your driving needs"></textarea>
+                            <textarea id="message" class="form-control"
+                                placeholder="Tell us about your driving needs"></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
@@ -1196,7 +1301,8 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>All Season Driving School</h3>
-                    <p>Professional driving instruction from certified instructors. Get your driver's license with our comprehensive training programs.</p>
+                    <p>Professional driving instruction from certified instructors. Get your driver's license with our
+                        comprehensive training programs.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1225,20 +1331,24 @@
                     <h3>Contact Info</h3>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 5428 Tenth Line W, Mississauga, ON L5M 0N1</li>
-                        <li><i class="fas fa-phone"></i> (905) 226-0077</li>
-                        <li><i class="fas fa-envelope"></i> allseasondrivingschool@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (905) 226-0077<p style="padding-left: 20px;">(647) 778-4573</p></li>
+                        <li><i class="fas fa-envelope"></i> allseasonds@gmail.com</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; <script>document.write(new Date().getFullYear());</script> All Season Driving School. All rights reserved.</p>
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear());</script> All Season Driving School. All rights
+                    reserved.
+                </p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Button -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/9052260077?text=Hi! I'm interested in driving lessons with All Season Driving School. Can you help me with more information?" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/9052260077?text=Hi! I'm interested in driving lessons with All Season Driving School. Can you help me with more information?"
+            target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i>
             <span class="tooltip">Chat with us on WhatsApp!</span>
         </a>
@@ -1317,4 +1427,5 @@
         });
     </script>
 </body>
+
 </html>

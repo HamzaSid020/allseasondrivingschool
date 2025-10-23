@@ -34,7 +34,7 @@
         
         /* Page Hero */
         .page-hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/contact-hero.jpg');
             background-size: cover; background-position: center; height: 50vh; display: flex; align-items: center; 
             text-align: center; color: white; margin-top: 80px; 
         }
@@ -96,10 +96,104 @@
         .map-container iframe { width: 100%; height: 450px; border: 0; display: block; }
         
         /* FAQ Section */
-        .faq-section { background: var(--light); }
-        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .faq-item { background: white; padding: 25px; border-radius: 10px; box-shadow: var(--shadow); }
-        .faq-item h4 { margin-bottom: 10px; font-size: 1.2rem; color: var(--primary); }
+       /* 🔷 FAQ Section */
+.faq-section {
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+  padding: 100px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
+}
+
+/* 💠 FAQ Card Styling */
+.faq-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blue highlight on hover */
+.faq-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
+}
+
+.faq-item h4 {
+  color: #0f172a;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  position: relative;
+  font-weight: 600;
+}
+
+.faq-item p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+/* Active (expanded) FAQ */
+.faq-item.active p {
+  max-height: 200px;
+  opacity: 1;
+}
+
+/* Blue border animation */
+.faq-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 4px;
+  background: #2563eb;
+  transition: all 0.4s ease;
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+.faq-item:hover::before,
+.faq-item.active::before {
+  width: 100%;
+}
+
+/* ✨ Fade In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 70px 0;
+  }
+  .faq-item {
+    padding: 25px;
+  }
+}
+
         
         /* Footer */
         footer { background: var(--dark); color: white; padding: 70px 0 20px; }
@@ -219,14 +313,15 @@
                             <i class="fas fa-phone"></i>
                             <div>
                                 <strong>Phone</strong>
-                                <p><a href="tel:(905) 226-0077">(905) 226-0077</a></p>
+                                <p><a href="tel:(905) 226-0077" style="text-decoration: none; color: black;">(905) 226-0077</a></p>
+                                <p><a href="tel:(647) 778-4573" style="text-decoration: none; color: black">(647) 778-4573</a></p>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <strong>Email</strong>
-                                <p><a href="mailto:allseasondrivingschool@gmail.com">allseasondrivingschool@gmail.com</a></p>
+                                <p><a href="mailto:allseasonds@gmail.com" style="text-decoration: none; color: black">allseasonds@gmail.com</a></p>
                             </div>
                         </li>
                     </ul>
@@ -243,7 +338,7 @@
                 
                 <div class="contact-form fade-in">
                     <h3>Send Us a Message</h3>
-                    <form id="contactForm" action="https://formsubmit.co/allseasondrivingschool@gmail.com" method="POST">
+                    <form id="contactForm" action="https://formsubmit.co/allseasonds@gmail.com" method="POST">
 
                         <div class="form-row">
                             <div class="form-group">
@@ -350,40 +445,65 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="section faq-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions about our driving school</p>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item fade-in">
-                    <h4>How do I book my first driving lesson?</h4>
-                    <p>You can book your first lesson by filling out the contact form, calling us directly, or messaging us on WhatsApp. We'll get back to you within 24 hours to schedule your first lesson.</p>
-                </div>
-                <div class="faq-item fade-in">
-                    <h4>What should I bring to my first lesson?</h4>
-                    <p>For your first lesson, please bring your G1 license, comfortable shoes for driving, and any glasses or contacts if you require them for driving.</p>
-                </div>
-                <div class="faq-item fade-in">
-                    <h4>Do you offer pick-up and drop-off services?</h4>
-                    <p>Yes, we offer pick-up and drop-off services within our service areas for all driving lessons and road tests.</p>
-                </div>
-                <div class="faq-item fade-in">
-                    <h4>What areas do you serve?</h4>
-                    <p>We primarily serve Mississauga, Brampton, Oakville, and surrounding areas. Contact us to confirm if we serve your specific location.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section faq-section">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Frequently Asked Questions</h2>
+      <p>Quick answers to common questions about our driving school</p>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item fade-in">
+        <h4>How do I book my first driving lesson?</h4>
+        <p>You can book your first lesson by filling out the contact form, calling us directly, or messaging us on WhatsApp. We'll get back to you within 24 hours to schedule your first lesson.</p>
+      </div>
+      <div class="faq-item fade-in">
+        <h4>What should I bring to my first lesson?</h4>
+        <p>For your first lesson, please bring your G1 license, comfortable shoes for driving, and any glasses or contacts if you require them for driving.</p>
+      </div>
+      <div class="faq-item fade-in">
+        <h4>Do you offer pick-up and drop-off services?</h4>
+        <p>Yes, we offer pick-up and drop-off services within our service areas for all driving lessons and road tests.</p>
+      </div>
+      <div class="faq-item fade-in">
+        <h4>What areas do you serve?</h4>
+        <p>We primarily serve Mississauga, Brampton, Oakville, and surrounding areas. Contact us to confirm if we serve your specific location.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in");
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  // Fade-in on scroll
+  const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  });
+  fadeElements.forEach(el => fadeObserver.observe(el));
+
+  // Accordion effect
+  faqItems.forEach(item => {
+    item.addEventListener("click", () => {
+      faqItems.forEach(i => i !== item && i.classList.remove("active"));
+      item.classList.toggle("active");
+    });
+  });
+});
+</script>
+
 
     <!-- Footer -->
-    <footer>
+   <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <h3>All Season Driving School</h3>
-                    <p>Professional driving instruction from certified instructors. Get your driver's license with our comprehensive training programs.</p>
+                    <p>Professional driving instruction from certified instructors. Get your driver's license with our
+                        comprehensive training programs.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -412,13 +532,16 @@
                     <h3>Contact Info</h3>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> 5428 Tenth Line W, Mississauga, ON L5M 0N1</li>
-                        <li><i class="fas fa-phone"></i> (905) 226-0077</li>
-                        <li><i class="fas fa-envelope"></i> allseasondrivingschool@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> (905) 226-0077<p style="padding-left: 20px;">(647) 778-4573</p></li>
+                        <li><i class="fas fa-envelope"></i> allseasonds@gmail.com</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; <script>document.write(new Date().getFullYear());</script> All Season Driving School. All rights reserved.</p>
+                <p>&copy;
+                    <script>document.write(new Date().getFullYear());</script> All Season Driving School. All rights
+                    reserved.
+                </p>
             </div>
         </div>
     </footer>
