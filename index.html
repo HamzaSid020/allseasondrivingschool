@@ -27,11 +27,13 @@
             box-sizing: border-box;
         }
 
-        body {
+        html, body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            width: 100%;
+            max-width: 100%;
         }
 
         .container {
@@ -318,10 +320,8 @@
         .package-card {
             background: #fff;
             border-radius: 0 0 15px 15px;
-            /* Only round bottom corners */
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            overflow: visible;
-            /* Changed from hidden to visible */
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             transition: var(--transition);
@@ -336,7 +336,6 @@
 
         .package-img {
             background-size: cover;
-            /* This will fill the entire space */
             background-position: center;
             height: 180px;
             border-radius: 0;
@@ -367,17 +366,14 @@
         .package-price {
             font-size: 22px;
             font-weight: 700;
-            /* Made bolder */
             color: var(--primary);
             display: block;
-            /* Makes it take full width */
         }
 
         .package-tax {
             font-size: 8px;
             color: var(--gray);
             display: block;
-            /* Makes it take full width */
         }
 
         /* Package Features */
@@ -387,10 +383,8 @@
             margin-bottom: 25px;
             flex-grow: 1;
             min-height: 150px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
             text-align: left;
+            width: 100%;
         }
 
         .package-features li {
@@ -622,7 +616,6 @@
             text-align: center;
             padding: 120px 20px;
             overflow: hidden;
-            /* Scroll par Work karna ka lia add kia hai  👇 */
             background-attachment: fixed;
         }
 
@@ -837,17 +830,17 @@
             transform: translateX(0);
         }
 
+        /* Partners Section - Fixed */
         .partners-section {
             padding: 80px 20px;
             text-align: center;
             position: relative;
             background: #f9f9f9;
             overflow: hidden;
-
+            width: 100%;
         }
 
         .partners-section h2 {
-            -webkit-background-clip: text;
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 60px;
@@ -858,6 +851,7 @@
             overflow: hidden;
             width: 100%;
             position: relative;
+            max-width: 100%;
         }
 
         .partners-slider {
@@ -902,23 +896,6 @@
             width: 100%;
             height: 80px;
             pointer-events: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-        .partners-section {
-            padding: 60px 10px;
-        }
-        .partners-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 40px;
-        }
-        .partner-logo {
-            width: 90px;
-        }
-        .partners-slider > div {
-            gap: 50px;
-        }
         }
 
         @keyframes slideInLeft {
@@ -1018,6 +995,75 @@
 
             .contact-container {
                 grid-template-columns: 1fr;
+            }
+            
+            /* Mobile fixes for horizontal scroll */
+            .container {
+                padding: 0 15px;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            
+            .package-features {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .package-features li {
+                word-break: break-word;
+            }
+            
+            .partners-section {
+                padding: 60px 10px;
+            }
+            
+            .partners-section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
+            }
+            
+            .partner-logo {
+                width: 90px;
+            }
+            
+            .partners-slider > div {
+                gap: 50px;
+            }
+            
+            .contact-info, 
+            .contact-form {
+                padding: 25px;
+            }
+            
+            .form-control {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .hero-content h1 {
+                font-size: 28px;
+            }
+            
+            .package-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .partner-logo {
+                width: 70px;
+            }
+            
+            .partners-slider > div {
+                gap: 30px;
             }
         }
     </style>
@@ -1327,9 +1373,6 @@
         </div>
         </div>
     </section>
-
-</body>
-</html>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
